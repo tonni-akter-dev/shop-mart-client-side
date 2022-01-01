@@ -141,7 +141,7 @@ const About = () => {
               </li>
             </ul>
             <div className="details jane">
-              <h2>Parks Missie </h2>
+              <h2>Parks Missier </h2>
             </div>
           </div>
         </div>
