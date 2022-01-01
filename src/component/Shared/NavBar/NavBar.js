@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 const NavBar = () => {
   return (
     <div>
-      <Navbar fixed="top" expand="lg">
+      <Navbar expand="lg">
         <Container>
           <Navbar.Brand href="#home">
             <img src="/logo.webp" style={{ height: "50px" }} alt="" />
