@@ -2,7 +2,6 @@ import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import "./NavBar.css";
 import { NavLink } from "react-router-dom";
-
 const NavBar = () => {
   return (
     <div>
@@ -100,7 +99,7 @@ const NavBar = () => {
                 style={{ color: "black", marginRight: "20px" }}
                 to="/login"
               >
-               <i class="fas fa-search"></i>
+                <i class="fas fa-search"></i>
               </NavLink>
               <NavLink
                 style={{ color: "black", marginRight: "20px" }}
