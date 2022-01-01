@@ -23,7 +23,6 @@ const Feature = () => {
                 {
                     feature.map((f, index) =>
                         <img
-
                             key={index}
                             className='featureImg col-lg-2 img-fluid m-0 p-0'
                             src={f.img} alt="" />
