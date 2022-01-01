@@ -84,22 +84,22 @@ const About = () => {
             </div>
             <ul className="social-icons">
               <li>
-                <a href="#">
+                <a href="/">
                   <i className="fab fa-facebook-f"></i>
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="/">
                   <i className="fab fa-instagram"></i>
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="/">
                   <i className="fab fa-twitter"></i>
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="/">
                   <i className="fab fa-dribbble"></i>
                 </a>
               </li>
@@ -119,22 +119,22 @@ const About = () => {
             </div>
             <ul className="social-icons">
               <li>
-                <a href="#">
+                <a href="/">
                   <i className="fab fa-facebook-f"></i>
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="/">
                   <i className="fab fa-instagram"></i>
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="/">
                   <i className="fab fa-twitter"></i>
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="/">
                   <i className="fab fa-dribbble"></i>
                 </a>
               </li>
@@ -154,22 +154,22 @@ const About = () => {
             </div>
             <ul className="social-icons">
               <li>
-                <a href="#">
+                <a href="/">
                   <i className="fab fa-facebook-f"></i>
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="/">
                   <i className="fab fa-instagram"></i>
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="/">
                   <i className="fab fa-twitter"></i>
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="/">
                   <i className="fab fa-dribbble"></i>
                 </a>
               </li>
