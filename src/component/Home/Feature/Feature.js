@@ -15,6 +15,7 @@ const Feature = () => {
         { img: Img_4 },
         { img: Img_5 },
         { img: Img_6 }
+
     ]
     return (
         <div className='container'>

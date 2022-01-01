@@ -6,6 +6,7 @@ const Services = () => {
         { icon: 'fas fa-taxi', title: 'Free Shipping', subtitle: 'Only orders from $ 500' },
         { icon: 'fas fa-undo-alt', title: '07 days return', subtitle: 'Lorem Ipsum is simply' },
         { icon: 'fas fa-phone-volume', title: 'Support 24/7', subtitle: 'It is a long established' },
+
     ]
     return (
         <div className=' container my-3'>
