@@ -1,5 +1,10 @@
 import React, { useState } from "react";
+<<<<<<< HEAD
 import { Container, Nav, Navbar } from "react-bootstrap";
+=======
+import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
+import "./NavBar.css";
+>>>>>>> 93ac5b1f317763dceeab77b1ea8d7b754b87e0ea
 import { NavLink, useNavigate } from "react-router-dom";
 import useAuth from "../../hook/useAuth";
 import "./NavBar.css";
@@ -68,16 +73,18 @@ const NavBar = () => {
               >
                 Shop
               </NavLink>
-              <NavLink
-                style={{
-                  color: "black",
-                  textDecoration: "none",
-                  margin: "10px",
-                }}
-                to="/"
-              >
-                Pages
-              </NavLink>
+              {/* pages */}
+              <NavDropdown title="Pages" id="basic-nav-dropdown">
+                <NavDropdown.Item href="#action/3.1">
+                  <NavLink to="/about">About us</NavLink>
+                </NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.2">
+                  <NavLink to="/contact">Contact Us</NavLink>
+                </NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.3">
+                  <NavLink to="/notfound">Not Found</NavLink>
+                </NavDropdown.Item>
+              </NavDropdown>
               <NavLink
                 style={{
                   color: "black",
@@ -88,26 +95,6 @@ const NavBar = () => {
               >
                 Blogs
               </NavLink>
-              {/* <NavLink
-                style={{
-                  color: "black",
-                  textDecoration: "none",
-                  margin: "10px",
-                }}
-                to="/about"
-              >
-                ABOUT US
-              </NavLink> */}
-              {/* <NavLink
-                style={{
-                  color: "black",
-                  textDecoration: "none",
-                  margin: "10px",
-                }}
-                to="/dashboard"
-              >
-                DASHBOARD
-              </NavLink> */}
             </Nav>
             <Nav>
               <NavLink
@@ -148,7 +135,6 @@ const NavBar = () => {
                     </div>
                     <div class="modal-body">
                       {/* login form */}
-
                       <form className="login-form" onSubmit={handleLoginSubmit}>
                         <h4>Login Form</h4>
                         <input
