@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 const NavBar = () => {
   return (
     <div>
-      <Navbar fixed="top" expand="lg">
+      <Navbar expand="lg">
         <Container>
           <Navbar.Brand href="#home">
             <img src="/logo.webp" style={{ height: "50px" }} alt="" />
@@ -100,7 +100,7 @@ const NavBar = () => {
                 style={{ color: "black", marginRight: "20px" }}
                 to="/login"
               >
-               <i class="fas fa-search"></i>
+                <i class="fas fa-search"></i>
               </NavLink>
               <NavLink
                 style={{ color: "black", marginRight: "20px" }}
