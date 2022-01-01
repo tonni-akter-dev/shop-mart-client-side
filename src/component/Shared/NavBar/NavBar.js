@@ -1,21 +1,11 @@
 import React, { useState } from "react";
-import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
+import { Container, Nav, Navbar } from "react-bootstrap";
 import "./NavBar.css";
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 93ac5b1f317763dceeab77b1ea8d7b754b87e0ea
-=======
->>>>>>> 22920e582b1c30bf7a847483db417cdd74bb6384
-import { NavLink, useNavigate } from "react-router-dom";
-import useAuth from "../../hook/useAuth";
-import "./NavBar.css";
-=======
 import { NavLink } from "react-router-dom";
 import Login from "../../Register/Login/Login";
 import Register from "../../Register/Register";
 import { pink } from '@mui/material/colors';
 import Checkbox from '@mui/material/Checkbox';
->>>>>>> rukon
 const NavBar = () => {
   const [toggle, setToggle] = useState(false);
   const toggleChecked = () => setToggle(value => !value);
@@ -72,28 +62,46 @@ const NavBar = () => {
               >
                 Shop
               </NavLink>
-              {/* pages */}
-              <NavDropdown title="Pages" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">
-                  <NavLink to="/about">About us</NavLink>
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
-                  <NavLink to="/contact">Contact Us</NavLink>
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
-                  <NavLink to="/notfound">Not Found</NavLink>
-                </NavDropdown.Item>
-              </NavDropdown>
               <NavLink
                 style={{
                   color: "black",
                   textDecoration: "none",
                   margin: "10px",
                 }}
-                to="/blogs"
+                to="/"
               >
-                Blogs
+                Pages
               </NavLink>
+              <NavLink
+                style={{
+                  color: "black",
+                  textDecoration: "none",
+                  margin: "10px",
+                }}
+                to="/"
+              >
+                Blog
+              </NavLink>
+              {/* <NavLink
+                style={{
+                  color: "black",
+                  textDecoration: "none",
+                  margin: "10px",
+                }}
+                to="/about"
+              >
+                ABOUT US
+              </NavLink> */}
+              {/* <NavLink
+                style={{
+                  color: "black",
+                  textDecoration: "none",
+                  margin: "10px",
+                }}
+                to="/dashboard"
+              >
+                DASHBOARD
+              </NavLink> */}
             </Nav>
             <Nav>
               <NavLink
@@ -129,57 +137,6 @@ const NavBar = () => {
                         aria-label="Close"
                       ></button>
                     </div>
-<<<<<<< HEAD
-                    <div class="modal-body">
-                      {/* login form */}
-                      <form className="login-form" onSubmit={handleLoginSubmit}>
-                        <h4>Login Form</h4>
-                        <input
-                          className="field"
-                          required
-                          type="email"
-                          name="email"
-                          placeholder="Your Email"
-                          onChange={handleOnchange}
-                        />
-                        <input
-                          className="field"
-                          required
-                          placeholder="Your password"
-                          type="password"
-                          name="password"
-                          onChange={handleOnchange}
-                        />{" "}
-                        <br />
-                        <button className="btn btn-dark" type="submit">
-                          Login
-                        </button>{" "}
-                        <br />
-                        <NavLink
-                          to="/register"
-                          style={{
-                            textDecoration: "none",
-                            color: "black",
-                            fontWeight: "bolder",
-                            paddingLeft: "10px",
-                          }}
-                        >
-                          New User? Please Register
-                        </NavLink>
-                      </form>
-                    </div>
-                    <div class="modal-footer">
-                      <button
-                        type="button"
-                        class="btn btn-secondary"
-                        data-bs-dismiss="modal"
-                      >
-                        Close
-                      </button>
-                      <button type="button" class="btn btn-primary">
-                        Save changes
-                      </button>
-=======
 
                     <div class="modal-body">
                       {/* Login */}
@@ -198,9 +155,9 @@ const NavBar = () => {
                               },
                             }}
                           />
+
                         </span>
                       </div>
->>>>>>> rukon
                     </div>
                   </div>
                 </div>
