@@ -86,7 +86,7 @@ const NavBar = () => {
                 }}
                 to="/blogs"
               >
-                Blog
+                Blogs
               </NavLink>
               {/* <NavLink
                 style={{

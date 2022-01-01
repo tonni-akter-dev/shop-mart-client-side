@@ -3,7 +3,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import AuthProvider from "./component/context/AuthProvider/AuthProvider";
 import Home from "./component/Home/Home/Home";
 import Register from "./component/Register/Register";
-import Blog from "./component/Routes/Blog/Blog";
+import Blogs from "./component/Routes/Blogs/Blogs/Blogs";
+
 function App() {
   return (
     <div className="App">
@@ -13,7 +14,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/blogs" element={<Blog/>} />
+          <Route path="/blogs" element={<Blogs/>} />
         </Routes>
       </BrowserRouter>
    </AuthProvider>
