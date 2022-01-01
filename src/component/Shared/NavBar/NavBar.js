@@ -30,6 +30,7 @@ const NavBar = () => {
                   textDecoration: "none",
                   margin: "10px",
                 }}
+
                 to="/"
               >
                 Home
@@ -140,6 +141,7 @@ const NavBar = () => {
                       ></button>
                     </div>
 
+
                     <div class="modal-body">
                       {/* Login */}
                       <div>
@@ -149,7 +151,9 @@ const NavBar = () => {
                             checked={toggle}
                             onChange={toggleChecked}
                             {...label}
+
                             defaultChecked
+
                             sx={{
                               color: pink[800],
                               '&.Mui-checked': {
