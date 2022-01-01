@@ -1,10 +1,5 @@
 import React, { useState } from "react";
-<<<<<<< HEAD
-import { Container, Nav, Navbar } from "react-bootstrap";
-=======
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
-import "./NavBar.css";
->>>>>>> 93ac5b1f317763dceeab77b1ea8d7b754b87e0ea
 import { NavLink, useNavigate } from "react-router-dom";
 import useAuth from "../../hook/useAuth";
 import "./NavBar.css";
@@ -94,6 +89,16 @@ const NavBar = () => {
                 to="/blogs"
               >
                 Blogs
+              </NavLink>
+              <NavLink
+                style={{
+                  color: "black",
+                  textDecoration: "none",
+                  margin: "10px",
+                }}
+                to="/dashboard"
+              >
+                Dashboard
               </NavLink>
             </Nav>
             <Nav>
