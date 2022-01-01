@@ -1,54 +1,4 @@
-<<<<<<< HEAD
-import React from 'react';
-// import BrandProduct from './img/brand-product.png'
-import Imgwomen from './img/img-women.png'
-import './Bannger.css'
-const Banner = () => {
-    return (
-        <div className='banner-container'>
-            <div id="carouselExampleCaptions" className="carousel slide" data-bs-ride="carousel">
-                <div className="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                </div>
-                <div className="carousel-inner">
-                    <div className="carousel-item active">
-
-                        <div className="carousel-caption d-none d-md-block">
-                            <h5>First slide label</h5>
-                            <p>Some representative placeholder content for the first slide.</p>
-                        </div>
-                        <img src={Imgwomen} className="d-block h-100" alt="..." />
-                    </div>
-                    <div className="carousel-item">
-
-                        <div className="carousel-caption d-none d-md-block">
-                            <h5>Second slide label</h5>
-                            <p>Some representative placeholder content for the second slide.</p>
-                        </div>
-                        <img src={Imgwomen} className="d-block h-100" alt="..." />
-                    </div>
-                    <div className="carousel-item">
-
-                        <div className="carousel-caption d-none d-md-block">
-                            <h5>Third slide label</h5>
-                            <p>Some representative placeholder content for the third slide.</p>
-                        </div>
-                        <img src={Imgwomen} className="d-block h-100" alt="..." />
-                    </div>
-                </div>
-                <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span className="visually-hidden">Previous</span>
-                </button>
-                <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span className="visually-hidden">Next</span>
-                </button>
-=======
 import React from "react";
-
 const Banner = () => {
   return (
     <div>
@@ -60,7 +10,10 @@ const Banner = () => {
         <div class="carousel-inner">
           <div class="carousel-item active" data-bs-interval="10000">
             <div className="row" style={{ backgroundColor: "#EEEEEE" }}>
-              <div className="col-lg-6" style={{margin:"auto",paddingLeft:"170px"}}>
+              <div
+                className="col-lg-6"
+                style={{ margin: "auto", paddingLeft: "170px" }}
+              >
                 <p>Summer 2022</p>
                 <h1>New Arrival Collection</h1>
                 <button className="btn btn-dark">Explore Now</button>
@@ -85,7 +38,14 @@ const Banner = () => {
                   alt="..."
                 />
               </div>
-              <div className="col-lg-6" style={{margin:"auto",textAlign:"right",paddingRight:"140px"}}>
+              <div
+                className="col-lg-6"
+                style={{
+                  margin: "auto",
+                  textAlign: "right",
+                  paddingRight: "140px",
+                }}
+              >
                 <p>Summer 2022</p>
                 <h1>New Arrival Collection</h1>
                 <button className="btn btn-dark">Explore Now</button>
@@ -94,7 +54,10 @@ const Banner = () => {
           </div>
           <div class="carousel-item">
             <div className="row" style={{ backgroundColor: "#ECF4F6" }}>
-            <div className="col-lg-6" style={{margin:"auto",paddingLeft:"170px"}}>
+              <div
+                className="col-lg-6"
+                style={{ margin: "auto", paddingLeft: "170px" }}
+              >
                 <p>Summer 2022</p>
                 <h1>New Arrival Collection</h1>
                 <button className="btn btn-dark">Explore Now</button>
@@ -107,7 +70,6 @@ const Banner = () => {
                   alt="..."
                 />
               </div>
->>>>>>> 8f8b26d9abf7f97bd04de88f1ae2c85944dfd355
             </div>
           </div>
         </div>
