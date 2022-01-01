@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Container, Nav, Navbar } from "react-bootstrap";
+import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import "./NavBar.css";
 import { NavLink, useNavigate } from "react-router-dom";
 import useAuth from "../../hook/useAuth";
@@ -68,16 +68,18 @@ const NavBar = () => {
               >
                 Shop
               </NavLink>
-              <NavLink
-                style={{
-                  color: "black",
-                  textDecoration: "none",
-                  margin: "10px",
-                }}
-                to="/"
-              >
-                Pages
-              </NavLink>
+              {/* pages */}
+              <NavDropdown title="Pages" id="basic-nav-dropdown">
+                <NavDropdown.Item href="#action/3.1">
+                  <NavLink to="/about">About us</NavLink>
+                </NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.2">
+                  <NavLink to="/contact">Contact Us</NavLink>
+                </NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.3">
+                  <NavLink to="/notfound">Not Found</NavLink>
+                </NavDropdown.Item>
+              </NavDropdown>
               <NavLink
                 style={{
                   color: "black",
@@ -88,26 +90,6 @@ const NavBar = () => {
               >
                 Blog
               </NavLink>
-              {/* <NavLink
-                style={{
-                  color: "black",
-                  textDecoration: "none",
-                  margin: "10px",
-                }}
-                to="/about"
-              >
-                ABOUT US
-              </NavLink> */}
-              {/* <NavLink
-                style={{
-                  color: "black",
-                  textDecoration: "none",
-                  margin: "10px",
-                }}
-                to="/dashboard"
-              >
-                DASHBOARD
-              </NavLink> */}
             </Nav>
             <Nav>
               <NavLink

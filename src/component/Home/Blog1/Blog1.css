@@ -19,7 +19,7 @@
     color:#18d4ca;
     
   }
-  .card:hover{
+  .card1:hover{
     transform: scale(1.05);
     box-shadow: 10px 10px 15px rgba(0,0,0,0.3);
   }
@@ -27,7 +27,7 @@
     height:80px;  
   }
   
-  .card::before, .card::after {
+  .card1::before, .card1::after {
     position: absolute;
     top: 0;
     right: 0;
@@ -39,12 +39,12 @@
     content: '';
     pointer-events: none;
   }
-  .card::before {
+  .card1::before {
     transform-origin: left top;
   }
-  .card::after {
+  .card1::after {
     transform-origin: right bottom;
   }
-  .card:hover::before, .card:hover::after, .card:focus::before, .card:focus::after {
+  .card1:hover::before, .card1:hover::after, .card1:focus::before, .card1:focus::after {
     transform: scale3d(1, 1, 1);
   }
