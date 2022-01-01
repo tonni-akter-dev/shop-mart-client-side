@@ -1,23 +1,17 @@
 import React, { useState } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import "./NavBar.css";
-import { NavLink, useNavigate } from "react-router-dom";
-import useAuth from "../../hook/useAuth";
+import { NavLink } from "react-router-dom";
+import Login from "../../Register/Login/Login";
+import Register from "../../Register/Register";
+import { pink } from '@mui/material/colors';
+import Checkbox from '@mui/material/Checkbox';
 const NavBar = () => {
-  const [loginData, setLoginData] = useState({});
-  const { loginUser } = useAuth();
-  let navigate = useNavigate();
-  const handleOnchange = (e) => {
-    const field = e.target.name;
-    const value = e.target.value;
-    const newLoginData = { ...loginData };
-    newLoginData[field] = value;
-    setLoginData(newLoginData);
-  };
-  const handleLoginSubmit = (e) => {
-    loginUser(loginData?.email, loginData?.password, navigate);
-    e.preventDefault();
-  };
+  const [toggle, setToggle] = useState(false);
+  const toggleChecked = () => setToggle(value => !value);
+
+  const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
+
   return (
     <div>
       <Navbar expand="lg">
@@ -116,7 +110,6 @@ const NavBar = () => {
               >
                 <i className="fas fa-search"></i>
               </NavLink>
-
               {/* login */}
               <button
                 type="button"
@@ -136,9 +129,7 @@ const NavBar = () => {
                 <div class="modal-dialog">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title mx-auto" id="exampleModalLabel">
-                        Login
-                      </h5>
+
                       <button
                         type="button"
                         class="btn-close"
@@ -146,56 +137,26 @@ const NavBar = () => {
                         aria-label="Close"
                       ></button>
                     </div>
-                    <div class="modal-body">
-                      {/* login form */}
 
-                      <form className="login-form" onSubmit={handleLoginSubmit}>
-                        <h4>Login Form</h4>
-                        <input
-                          className="field"
-                          required
-                          type="email"
-                          name="email"
-                          placeholder="Your Email"
-                          onChange={handleOnchange}
-                        />
-                        <input
-                          className="field"
-                          required
-                          placeholder="Your password"
-                          type="password"
-                          name="password"
-                          onChange={handleOnchange}
-                        />{" "}
-                        <br />
-                        <button className="btn btn-dark" type="submit">
-                          Login
-                        </button>{" "}
-                        <br />
-                        <NavLink
-                          to="/register"
-                          style={{
-                            textDecoration: "none",
-                            color: "black",
-                            fontWeight: "bolder",
-                            paddingLeft: "10px",
-                          }}
-                        >
-                          New User? Please Register
-                        </NavLink>
-                      </form>
-                    </div>
-                    <div class="modal-footer">
-                      <button
-                        type="button"
-                        class="btn btn-secondary"
-                        data-bs-dismiss="modal"
-                      >
-                        Close
-                      </button>
-                      <button type="button" class="btn btn-primary">
-                        Save changes
-                      </button>
+                    <div class="modal-body">
+                      {/* Login */}
+                      <div>
+                        {!toggle ? <Login /> : <Register />}
+                        <span className='text-2xl'> {!toggle ? "Are you New User? Please register" : ' Already Register Please login'}
+                          <Checkbox
+                            checked={toggle}
+                            onChange={toggleChecked}
+                            {...label}
+                            defaultChecked
+                            sx={{
+                              color: pink[800],
+                              '&.Mui-checked': {
+                                color: pink[600],
+                              },
+                            }}
+                          />
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
