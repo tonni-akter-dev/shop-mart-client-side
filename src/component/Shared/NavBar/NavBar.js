@@ -4,25 +4,24 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 =======
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import "./NavBar.css";
+<<<<<<< HEAD
 >>>>>>> 93ac5b1f317763dceeab77b1ea8d7b754b87e0ea
 import { NavLink, useNavigate } from "react-router-dom";
 import useAuth from "../../hook/useAuth";
 import "./NavBar.css";
+=======
+import { NavLink } from "react-router-dom";
+import Login from "../../Register/Login/Login";
+import Register from "../../Register/Register";
+import { pink } from '@mui/material/colors';
+import Checkbox from '@mui/material/Checkbox';
+>>>>>>> rukon
 const NavBar = () => {
-  const [loginData, setLoginData] = useState({});
-  const { loginUser } = useAuth();
-  let navigate = useNavigate();
-  const handleOnchange = (e) => {
-    const field = e.target.name;
-    const value = e.target.value;
-    const newLoginData = { ...loginData };
-    newLoginData[field] = value;
-    setLoginData(newLoginData);
-  };
-  const handleLoginSubmit = (e) => {
-    loginUser(loginData?.email, loginData?.password, navigate);
-    e.preventDefault();
-  };
+  const [toggle, setToggle] = useState(false);
+  const toggleChecked = () => setToggle(value => !value);
+
+  const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
+
   return (
     <div>
       <Navbar expand="lg">
@@ -103,7 +102,6 @@ const NavBar = () => {
               >
                 <i className="fas fa-search"></i>
               </NavLink>
-
               {/* login */}
               <button
                 type="button"
@@ -123,9 +121,7 @@ const NavBar = () => {
                 <div class="modal-dialog">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title mx-auto" id="exampleModalLabel">
-                        Login
-                      </h5>
+
                       <button
                         type="button"
                         class="btn-close"
@@ -133,6 +129,7 @@ const NavBar = () => {
                         aria-label="Close"
                       ></button>
                     </div>
+<<<<<<< HEAD
                     <div class="modal-body">
                       {/* login form */}
                       <form className="login-form" onSubmit={handleLoginSubmit}>
@@ -182,6 +179,28 @@ const NavBar = () => {
                       <button type="button" class="btn btn-primary">
                         Save changes
                       </button>
+=======
+
+                    <div class="modal-body">
+                      {/* Login */}
+                      <div>
+                        {!toggle ? <Login /> : <Register />}
+                        <span className='text-2xl'> {!toggle ? "Are you New User? Please register" : ' Already Register Please login'}
+                          <Checkbox
+                            checked={toggle}
+                            onChange={toggleChecked}
+                            {...label}
+                            defaultChecked
+                            sx={{
+                              color: pink[800],
+                              '&.Mui-checked': {
+                                color: pink[600],
+                              },
+                            }}
+                          />
+                        </span>
+                      </div>
+>>>>>>> rukon
                     </div>
                   </div>
                 </div>
