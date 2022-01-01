@@ -4,6 +4,7 @@ import NavBar from '../../Shared/NavBar/NavBar';
 import Banner from '../Banner/Banner';
 import Feature from '../Feature/Feature';
 import Services from '../Services/Services';
+import Gallary1 from '../Gallary1/Gallary1';
 
 const Home = () => {
     return (
@@ -12,6 +13,7 @@ const Home = () => {
             <Banner />
             <Services />
             <Feature />
+            <Gallary1 />
             <Footer />
         </div>
     );
