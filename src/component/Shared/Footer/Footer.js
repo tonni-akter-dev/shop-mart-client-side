@@ -8,6 +8,7 @@ const Footer = () => {
                 style={{ backgroundColor: "#45526e" }}
             >
                 {/* <!-- Grid container --> */}
+
                 <div class="container p-4 pb-0">
                     {/* <!-- Section: Links --> */}
                     <section class="">
