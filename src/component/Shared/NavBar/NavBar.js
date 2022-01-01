@@ -28,6 +28,7 @@ const NavBar = () => {
                   textDecoration: "none",
                   margin: "10px",
                 }}
+
                 to="/"
               >
                 Home
