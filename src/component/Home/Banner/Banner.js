@@ -1,5 +1,4 @@
 import React from "react";
-
 const Banner = () => {
   return (
     <div>
@@ -11,7 +10,14 @@ const Banner = () => {
         <div class="carousel-inner">
           <div class="carousel-item active" data-bs-interval="10000">
             <div className="row" style={{ backgroundColor: "#EEEEEE" }}>
+<<<<<<< HEAD
               <div className="col-lg-6" style={{ margin: "auto", paddingLeft: "170px" }}>
+=======
+              <div
+                className="col-lg-6"
+                style={{ margin: "auto", paddingLeft: "170px" }}
+              >
+>>>>>>> main
                 <p>Summer 2022</p>
                 <h1>New Arrival Collection</h1>
                 <button className="btn btn-dark">Explore Now</button>
@@ -36,7 +42,18 @@ const Banner = () => {
                   alt="..."
                 />
               </div>
+<<<<<<< HEAD
               <div className="col-lg-6" style={{ margin: "auto", textAlign: "right", paddingRight: "140px" }}>
+=======
+              <div
+                className="col-lg-6"
+                style={{
+                  margin: "auto",
+                  textAlign: "right",
+                  paddingRight: "140px",
+                }}
+              >
+>>>>>>> main
                 <p>Summer 2022</p>
                 <h1>New Arrival Collection</h1>
                 <button className="btn btn-dark">Explore Now</button>
@@ -45,7 +62,14 @@ const Banner = () => {
           </div>
           <div class="carousel-item">
             <div className="row" style={{ backgroundColor: "#ECF4F6" }}>
+<<<<<<< HEAD
               <div className="col-lg-6" style={{ margin: "auto", paddingLeft: "170px" }}>
+=======
+              <div
+                className="col-lg-6"
+                style={{ margin: "auto", paddingLeft: "170px" }}
+              >
+>>>>>>> main
                 <p>Summer 2022</p>
                 <h1>New Arrival Collection</h1>
                 <button className="btn btn-dark">Explore Now</button>
