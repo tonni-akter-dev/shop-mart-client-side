@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AuthProvider from "./component/context/AuthProvider/AuthProvider";
 import Home from "./component/Home/Home/Home";
 import About from "./component/pages/About/About";
+import NotFound from "./component/pages/NotFound/NotFound";
 function App() {
   return (
     <div className="App">
@@ -12,6 +13,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
             <Route path="/about" element={<About />} />
+            <Route path="/error" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
       </AuthProvider>

@@ -36,7 +36,8 @@ const Register = () => {
               name="name"
               onChange={handleOnchange}
             />{" "}
-            <br /><br />
+            <br />
+            <br />
             <input
               className=" container-fluid"
               required
@@ -47,7 +48,8 @@ const Register = () => {
               name="email"
               onChange={handleOnchange}
             />{" "}
-            <br /><br />
+            <br />
+            <br />
             <input
               className=" container-fluid"
               required
@@ -59,7 +61,8 @@ const Register = () => {
               name="password"
               onChange={handleOnchange}
             />{" "}
-            <br /><br />
+            <br />
+            <br />
             <input
               className=" container-fluid"
               required
@@ -69,7 +72,8 @@ const Register = () => {
               name="password2"
               onChange={handleOnchange}
             />{" "}
-            <br /><br />
+            <br />
+            <br />
             <button type="submit" className="btn btn-dark container-fluid">
               Register
             </button>

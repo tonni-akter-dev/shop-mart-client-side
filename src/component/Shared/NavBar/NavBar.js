@@ -1,18 +1,20 @@
 import React, { useState } from "react";
 
-import { Container, Nav, Navbar } from "react-bootstrap";
+import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import "./NavBar.css";
 import { NavLink } from "react-router-dom";
 import Login from "../../Register/Login/Login";
 import Register from "../../Register/Register";
-import { pink } from '@mui/material/colors';
-import Checkbox from '@mui/material/Checkbox';
+import { pink } from "@mui/material/colors";
+import Checkbox from "@mui/material/Checkbox";
+import useAuth from "../../hook/useAuth";
 
 const NavBar = () => {
+  const { user, logout } = useAuth();
   const [toggle, setToggle] = useState(false);
-  const toggleChecked = () => setToggle(value => !value);
+  const toggleChecked = () => setToggle((value) => !value);
 
-  const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
+  const label = { inputProps: { "aria-label": "Checkbox demo" } };
 
   return (
     <div>
@@ -30,7 +32,6 @@ const NavBar = () => {
                   textDecoration: "none",
                   margin: "10px",
                 }}
-
                 to="/"
               >
                 Home
@@ -65,37 +66,49 @@ const NavBar = () => {
               >
                 Shop
               </NavLink>
-              <NavLink
+
+              <NavDropdown title="Pages" id="basic-nav-dropdown">
+                <NavDropdown.Item href="/about">
+                  <NavLink to="/about"  style={{
+                  color: "black",
+                  textDecoration: "none",
+                  margin: "10px",
+                }}>About us</NavLink>
+                </NavDropdown.Item>
+                <NavDropdown.Item href="/contact">
+                  <NavLink  style={{
+                  color: "black",
+                  textDecoration: "none",
+                  margin: "10px",
+                }} to="/contact">Contact us</NavLink>
+                </NavDropdown.Item>
+                <NavDropdown.Item href="/blog">
+                <NavLink
                 style={{
                   color: "black",
                   textDecoration: "none",
                   margin: "10px",
                 }}
-                to="/"
-              >
-                Pages
-              </NavLink>
-              <NavLink
-                style={{
-                  color: "black",
-                  textDecoration: "none",
-                  margin: "10px",
-                }}
-                to="/"
+                to="/blog"
               >
                 Blog
               </NavLink>
-              {/* <NavLink
+                </NavDropdown.Item>
+                <NavDropdown.Item href="/error">
+                <NavLink
                 style={{
                   color: "black",
                   textDecoration: "none",
                   margin: "10px",
                 }}
-                to="/about"
+                to="/error"
               >
-                ABOUT US
-              </NavLink> */}
-              {/* <NavLink
+                Not Found 404
+              </NavLink>
+                </NavDropdown.Item>
+              </NavDropdown>
+             
+              <NavLink
                 style={{
                   color: "black",
                   textDecoration: "none",
@@ -103,11 +116,12 @@ const NavBar = () => {
                 }}
                 to="/dashboard"
               >
-                DASHBOARD
-              </NavLink> */}
+                Dashboard
+              </NavLink>
             </Nav>
             <Nav>
               <NavLink
+                className="mt-2"
                 style={{ color: "black", marginRight: "20px" }}
                 to="/login"
               >
@@ -116,7 +130,7 @@ const NavBar = () => {
               {/* login */}
               <button
                 type="button"
-                class="btn btn-primary"
+                class="btn"
                 data-bs-toggle="modal"
                 data-bs-target="#exampleModal"
               >
@@ -132,7 +146,6 @@ const NavBar = () => {
                 <div class="modal-dialog">
                   <div class="modal-content">
                     <div class="modal-header">
-
                       <button
                         type="button"
                         class="btn-close"
@@ -141,22 +154,23 @@ const NavBar = () => {
                       ></button>
                     </div>
 
-
                     <div class="modal-body">
                       {/* Login */}
                       <div>
                         {!toggle ? <Login /> : <Register />}
-                        <span className='text-2xl'> {!toggle ? "Are you New User? Please register" : ' Already Register Please login'}
+                        <span className="text-2xl">
+                          {" "}
+                          {!toggle
+                            ? "Are you New User? Please register"
+                            : " Already Register Please login"}
                           <Checkbox
                             checked={toggle}
                             onChange={toggleChecked}
                             {...label}
-
                             defaultChecked
-
                             sx={{
                               color: pink[800],
-                              '&.Mui-checked': {
+                              "&.Mui-checked": {
                                 color: pink[600],
                               },
                             }}
@@ -168,17 +182,32 @@ const NavBar = () => {
                 </div>
               </div>
 
-              <NavLink style={{ color: "black", marginRight: "20px" }} to="/">
+              <NavLink
+                className="mt-2"
+                style={{ color: "black", marginRight: "20px" }}
+                to="/"
+              >
                 <i className="far fa-heart"></i>
               </NavLink>
 
-              <NavLink style={{ color: "black", marginRight: "20px" }} to="/">
+              <NavLink
+                className="mt-2"
+                style={{ color: "black", marginRight: "20px" }}
+                to="/"
+              >
                 <i className="fab fa-opencart"></i>
               </NavLink>
 
-              {/* <NavLink style={{ color: "black", marginRight: "20px" }} to="/">
-                <i className="fas fa-sign-out-alt"></i>
-              </NavLink> */}
+              {user.email && (
+                <NavLink
+                  className="mt-2"
+                  onClick={logout}
+                  style={{ color: "black", marginRight: "20px" }}
+                  to="/"
+                >
+                  <i className="fas fa-sign-out-alt"></i>
+                </NavLink>
+              )}
             </Nav>
           </Navbar.Collapse>
         </Container>

@@ -72,7 +72,7 @@ const useFirebase = () => {
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         setError("");
-        navigate("/");
+        navigate("/home");
       })
       .catch((error) => {
         setError(error.message);
