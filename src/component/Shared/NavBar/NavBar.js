@@ -100,7 +100,7 @@ const NavBar = () => {
                 <i className="fas fa-search"></i>
               </NavLink>
 
-              {/* login */}
+              {/* login  */}
               <button
                 type="button"
                 class="btn btn-primary"
