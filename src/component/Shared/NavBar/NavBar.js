@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import { Container, Nav, Navbar } from "react-bootstrap";
 import "./NavBar.css";
 import { NavLink } from "react-router-dom";
@@ -6,6 +7,7 @@ import Login from "../../Register/Login/Login";
 import Register from "../../Register/Register";
 import { pink } from '@mui/material/colors';
 import Checkbox from '@mui/material/Checkbox';
+
 const NavBar = () => {
   const [toggle, setToggle] = useState(false);
   const toggleChecked = () => setToggle(value => !value);
