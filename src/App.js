@@ -1,12 +1,15 @@
-import React from "react";
-// import { Counter } from "./features/counter/Counter";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Banner from "./component/Home/Banner/Banner";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./component/Home/Home/Home";
 function App() {
   return (
     <div className="App">
-      <Banner></Banner>
-      {/* <Counter></Counter> */}
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
