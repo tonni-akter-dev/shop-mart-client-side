@@ -1,28 +1,13 @@
 import React, { useState } from "react";
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
-<<<<<<< HEAD
 import { NavLink, useNavigate } from "react-router-dom";
 import useAuth from "../../hook/useAuth";
 import "./NavBar.css";
+// import Login from "../../Register/Login/Login";
+// import Register from "../../Register/Register";
+// import { pink } from '@mui/material/colors';
+// import Checkbox from '@mui/material/Checkbox';
 
-
-
-=======
-import "./NavBar.css";
-import { NavLink, useNavigate } from "react-router-dom";
-import useAuth from "../../hook/useAuth";
-import "./NavBar.css";
-<<<<<<< HEAD
-=======
-=======
-import { NavLink } from "react-router-dom";
-import Login from "../../Register/Login/Login";
-import Register from "../../Register/Register";
-import { pink } from '@mui/material/colors';
-import Checkbox from '@mui/material/Checkbox';
->>>>>>> rukon
->>>>>>> d5a4f57eb664a647219214396c88b997eaf7cc20
->>>>>>> 770e993bf74f5120de8716520ac2923c7d73968c
 const NavBar = () => {
   const [loginData, setLoginData] = useState({});
   const { loginUser } = useAuth();
@@ -201,7 +186,6 @@ const NavBar = () => {
                   </div>
                 </div>
               </div>
-
               <NavLink style={{ color: "black", marginRight: "20px" }} to="/">
                 <i className="far fa-heart"></i>
               </NavLink>
