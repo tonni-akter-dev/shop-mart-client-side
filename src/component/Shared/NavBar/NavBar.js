@@ -155,8 +155,6 @@ const NavBar = () => {
                               },
                             }}
                           />
-
-
                         </span>
                       </div>
                     </div>
