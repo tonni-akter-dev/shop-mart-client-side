@@ -1,16 +1,22 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import AuthProvider from "./component/context/AuthProvider/AuthProvider";
 import Home from "./component/Home/Home/Home";
+import About from "./component/pages/About/About";
+import Register from "./component/Register/Register";
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+   <AuthProvider>
+   <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
-        
+          <Route path="/register" element={<Register />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </BrowserRouter>
+   </AuthProvider>
     </div>
   );
 }

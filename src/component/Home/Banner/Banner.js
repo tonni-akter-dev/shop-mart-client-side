@@ -1,5 +1,4 @@
 import React from "react";
-
 const Banner = () => {
   return (
     <div>
@@ -11,7 +10,10 @@ const Banner = () => {
         <div class="carousel-inner">
           <div class="carousel-item active" data-bs-interval="10000">
             <div className="row" style={{ backgroundColor: "#EEEEEE" }}>
-              <div className="col-lg-6" style={{ margin: "auto", paddingLeft: "170px" }}>
+              <div
+                className="col-lg-6"
+                style={{ margin: "auto", paddingLeft: "170px" }}
+              >
                 <p>Summer 2022</p>
                 <h1>New Arrival Collection</h1>
                 <button className="btn btn-dark">Explore Now</button>
@@ -36,7 +38,14 @@ const Banner = () => {
                   alt="..."
                 />
               </div>
-              <div className="col-lg-6" style={{ margin: "auto", textAlign: "right", paddingRight: "140px" }}>
+              <div
+                className="col-lg-6"
+                style={{
+                  margin: "auto",
+                  textAlign: "right",
+                  paddingRight: "140px",
+                }}
+              >
                 <p>Summer 2022</p>
                 <h1>New Arrival Collection</h1>
                 <button className="btn btn-dark">Explore Now</button>
@@ -45,7 +54,10 @@ const Banner = () => {
           </div>
           <div class="carousel-item">
             <div className="row" style={{ backgroundColor: "#ECF4F6" }}>
-              <div className="col-lg-6" style={{ margin: "auto", paddingLeft: "170px" }}>
+              <div
+                className="col-lg-6"
+                style={{ margin: "auto", paddingLeft: "170px" }}
+              >
                 <p>Summer 2022</p>
                 <h1>New Arrival Collection</h1>
                 <button className="btn btn-dark">Explore Now</button>
@@ -59,8 +71,8 @@ const Banner = () => {
                 />
               </div>
             </div>
-          </div>
-        </div>
+          </div >
+        </div >
         <button
           class="carousel-control-prev"
           type="button"
@@ -79,8 +91,8 @@ const Banner = () => {
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
-      </div>
-    </div>
+      </div >
+    </div >
   );
 };
 
