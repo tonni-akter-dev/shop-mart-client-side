@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
-import "./NavBar.css";
 import { NavLink, useNavigate } from "react-router-dom";
 import useAuth from "../../hook/useAuth";
+import "./NavBar.css";
 const NavBar = () => {
   const [loginData, setLoginData] = useState({});
   const { loginUser } = useAuth();
@@ -84,7 +84,7 @@ const NavBar = () => {
                   textDecoration: "none",
                   margin: "10px",
                 }}
-                to="/"
+                to="/blogs"
               >
                 Blog
               </NavLink>
