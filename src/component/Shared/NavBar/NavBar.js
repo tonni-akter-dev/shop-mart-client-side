@@ -148,7 +148,6 @@ const NavBar = () => {
                     </div>
                     <div class="modal-body">
                       {/* login form */}
-
                       <form className="login-form" onSubmit={handleLoginSubmit}>
                         <h4>Login Form</h4>
                         <input
