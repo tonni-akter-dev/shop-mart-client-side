@@ -1,23 +1,19 @@
+import Checkbox from '@mui/material/Checkbox';
+import { pink } from '@mui/material/colors';
 import React, { useState } from "react";
-import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
-import { NavLink, useNavigate } from "react-router-dom";
-import useAuth from "../../hook/useAuth";
+import { Container, Nav, Navbar } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
+import Login from "../../Register/Login/Login";
+import Register from "../../Register/Register";
 import "./NavBar.css";
+
+
 const NavBar = () => {
-  const [loginData, setLoginData] = useState({});
-  const { loginUser } = useAuth();
-  let navigate = useNavigate();
-  const handleOnchange = (e) => {
-    const field = e.target.name;
-    const value = e.target.value;
-    const newLoginData = { ...loginData };
-    newLoginData[field] = value;
-    setLoginData(newLoginData);
-  };
-  const handleLoginSubmit = (e) => {
-    loginUser(loginData?.email, loginData?.password, navigate);
-    e.preventDefault();
-  };
+  const [toggle, setToggle] = useState(false);
+  const toggleChecked = () => setToggle(value => !value);
+
+  const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
+
   return (
     <div>
       <Navbar expand="lg">
@@ -34,6 +30,7 @@ const NavBar = () => {
                   textDecoration: "none",
                   margin: "10px",
                 }}
+
                 to="/"
               >
                 Home
@@ -68,29 +65,37 @@ const NavBar = () => {
               >
                 Shop
               </NavLink>
-              {/* pages */}
-              <NavDropdown title="Pages" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">
-                  <NavLink to="/about">About us</NavLink>
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
-                  <NavLink to="/contact">Contact Us</NavLink>
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
-                  <NavLink to="/notfound">Not Found</NavLink>
-                </NavDropdown.Item>
-              </NavDropdown>
               <NavLink
                 style={{
                   color: "black",
                   textDecoration: "none",
                   margin: "10px",
                 }}
-                to="/blogs"
+                to="/"
               >
-                Blogs
+                Pages
               </NavLink>
               <NavLink
+                style={{
+                  color: "black",
+                  textDecoration: "none",
+                  margin: "10px",
+                }}
+                to="/"
+              >
+                Blog
+              </NavLink>
+              {/* <NavLink
+                style={{
+                  color: "black",
+                  textDecoration: "none",
+                  margin: "10px",
+                }}
+                to="/about"
+              >
+                ABOUT US
+              </NavLink> */}
+              {/* <NavLink
                 style={{
                   color: "black",
                   textDecoration: "none",
@@ -98,8 +103,8 @@ const NavBar = () => {
                 }}
                 to="/dashboard"
               >
-                Dashboard
-              </NavLink>
+                DASHBOARD
+              </NavLink> */}
             </Nav>
             <Nav>
               <NavLink
@@ -108,7 +113,6 @@ const NavBar = () => {
               >
                 <i className="fas fa-search"></i>
               </NavLink>
-
               {/* login */}
               <button
                 type="button"
@@ -128,9 +132,7 @@ const NavBar = () => {
                 <div class="modal-dialog">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title mx-auto" id="exampleModalLabel">
-                        Login
-                      </h5>
+
                       <button
                         type="button"
                         class="btn-close"
@@ -138,55 +140,29 @@ const NavBar = () => {
                         aria-label="Close"
                       ></button>
                     </div>
+
+
                     <div class="modal-body">
-                      {/* login form */}
-                      <form className="login-form" onSubmit={handleLoginSubmit}>
-                        <h4>Login Form</h4>
-                        <input
-                          className="field"
-                          required
-                          type="email"
-                          name="email"
-                          placeholder="Your Email"
-                          onChange={handleOnchange}
-                        />
-                        <input
-                          className="field"
-                          required
-                          placeholder="Your password"
-                          type="password"
-                          name="password"
-                          onChange={handleOnchange}
-                        />{" "}
-                        <br />
-                        <button className="btn btn-dark" type="submit">
-                          Login
-                        </button>{" "}
-                        <br />
-                        <NavLink
-                          to="/register"
-                          style={{
-                            textDecoration: "none",
-                            color: "black",
-                            fontWeight: "bolder",
-                            paddingLeft: "10px",
-                          }}
-                        >
-                          New User? Please Register
-                        </NavLink>
-                      </form>
-                    </div>
-                    <div class="modal-footer">
-                      <button
-                        type="button"
-                        class="btn btn-secondary"
-                        data-bs-dismiss="modal"
-                      >
-                        Close
-                      </button>
-                      <button type="button" class="btn btn-primary">
-                        Save changes
-                      </button>
+                      {/* Login */}
+                      <div>
+                        {!toggle ? <Login /> : <Register />}
+                        <span className='text-2xl'> {!toggle ? "Are you New User? Please register" : ' Already Register Please login'}
+                          <Checkbox
+                            checked={toggle}
+                            onChange={toggleChecked}
+                            {...label}
+
+                            defaultChecked
+
+                            sx={{
+                              color: pink[800],
+                              '&.Mui-checked': {
+                                color: pink[600],
+                              },
+                            }}
+                          />
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>

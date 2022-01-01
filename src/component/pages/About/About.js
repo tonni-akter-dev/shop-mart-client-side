@@ -74,7 +74,7 @@ const About = () => {
      
 <div className="container">
 <div className="row">
-        <div className="card-wrapper col-lg-3">
+        <div className="card-wrapper col-lg-4">
           <div className="card card3 profile-two">
             <div className="card-image profile-img--two">
               <img
@@ -84,22 +84,22 @@ const About = () => {
             </div>
             <ul className="social-icons">
               <li>
-                <a href="#">
+                <a href="/">
                   <i className="fab fa-facebook-f"></i>
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="/">
                   <i className="fab fa-instagram"></i>
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="/">
                   <i className="fab fa-twitter"></i>
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="/">
                   <i className="fab fa-dribbble"></i>
                 </a>
               </li>
@@ -109,7 +109,7 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className="card-wrapper col-lg-3">
+        <div className="card-wrapper col-lg-4">
           <div className="card card3 profile-two">
             <div className="card-image profile-img--two">
               <img
@@ -119,22 +119,22 @@ const About = () => {
             </div>
             <ul className="social-icons">
               <li>
-                <a href="#">
+                <a href="/">
                   <i className="fab fa-facebook-f"></i>
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="/">
                   <i className="fab fa-instagram"></i>
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="/">
                   <i className="fab fa-twitter"></i>
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="/">
                   <i className="fab fa-dribbble"></i>
                 </a>
               </li>
@@ -144,7 +144,7 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className="card-wrapper col-lg-3">
+        <div className="card-wrapper col-lg-4">
           <div className="card card3 profile-two">
             <div className="card-image profile-img--two">
               <img
@@ -154,22 +154,22 @@ const About = () => {
             </div>
             <ul className="social-icons">
               <li>
-                <a href="#">
+                <a href="/">
                   <i className="fab fa-facebook-f"></i>
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="/">
                   <i className="fab fa-instagram"></i>
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="/">
                   <i className="fab fa-twitter"></i>
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="/">
                   <i className="fab fa-dribbble"></i>
                 </a>
               </li>
