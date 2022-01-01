@@ -74,7 +74,7 @@ const About = () => {
      
 <div className="container">
 <div className="row">
-        <div className="card-wrapper col-lg-3">
+        <div className="card-wrapper col-lg-4">
           <div className="card card3 profile-two">
             <div className="card-image profile-img--two">
               <img
@@ -109,7 +109,7 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className="card-wrapper col-lg-3">
+        <div className="card-wrapper col-lg-4">
           <div className="card card3 profile-two">
             <div className="card-image profile-img--two">
               <img
@@ -144,7 +144,7 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className="card-wrapper col-lg-3">
+        <div className="card-wrapper col-lg-4">
           <div className="card card3 profile-two">
             <div className="card-image profile-img--two">
               <img
