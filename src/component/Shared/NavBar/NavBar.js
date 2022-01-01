@@ -2,7 +2,6 @@ import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import "./NavBar.css";
 import { NavLink } from "react-router-dom";
-
 const NavBar = () => {
   return (
     <div>
