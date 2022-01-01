@@ -1,0 +1,56 @@
+/* <!-- section 1 timer part  --> */
+.txtcolor{
+    color:#e91e63
+}
+.font{
+    font-size: 12px;
+}
+.mail:hover{
+    color:#00eaff;
+}
+.sec1{
+    background-color: #e91e63;
+}
+
+
+/* sec5 gallary part */
+.over{
+    overflow: hidden !important;
+    margin:0 auto;
+}
+.sec51pic{
+    height: 650px;
+    transition: 2s all ease-in-out;
+   
+}
+.sec51pic:hover{
+    transform: scale(1.1);
+}
+.pic{
+    transition: 2s all ease-in-out;
+}
+.pic:hover{
+    transform: scale(1.1);
+}
+.womenbtn{
+    position: absolute;
+    bottom: 15%;
+    left: 28%;
+}
+.bagbtn{
+    position: absolute;
+    bottom: 65%;
+    left: 10%;
+}
+.shoebtn{
+    position: absolute;
+    bottom: 10%;
+    left: 15%;
+}
+.watchbtn{
+    position: absolute;
+    bottom: 15%;
+    left: 20%;
+}
+
+/* nipa design part end */
