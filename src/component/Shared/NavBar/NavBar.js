@@ -95,7 +95,7 @@ const NavBar = () => {
               >
                 ABOUT US
               </NavLink> */}
-              {/* <NavLink
+              <NavLink
                 style={{
                   color: "black",
                   textDecoration: "none",
@@ -103,8 +103,8 @@ const NavBar = () => {
                 }}
                 to="/dashboard"
               >
-                DASHBOARD
-              </NavLink> */}
+                Dashboard
+              </NavLink>
             </Nav>
             <Nav>
               <NavLink

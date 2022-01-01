@@ -1,48 +1,38 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import AuthProvider from "./component/context/AuthProvider/AuthProvider";
+import AddProduct from "./component/Dashboard/Add A Product/AddProduct";
+import AddReview from "./component/Dashboard/AddReview/AddReview";
 import Dashboard from "./component/Dashboard/Dashboard/Dashboard";
 import MakeAdmin from "./component/Dashboard/MakeAdmin/MakeAdmin";
+import ManageAllOrders from "./component/Dashboard/ManageAllOrders/ManageAllOrders";
+import ManageProducts from "./component/Dashboard/ManageProducts/ManageProducts";
 import MyOrder from "./component/Dashboard/MyOrder/MyOrder";
+import Payment from "./component/Dashboard/Payment/Payment";
 import Home from "./component/Home/Home/Home";
-<<<<<<< HEAD
+import About from "./component/pages/About/About";
 import Register from "./component/Register/Register";
 
 function App() {
   return (
     <div className="App">
-<<<<<<< HEAD
-=======
-   <AuthProvider>
-   <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/blogs" element={<Blogs/>} />
-        </Routes>
-      </BrowserRouter>
-   </AuthProvider>
-
-=======
-import About from "./component/pages/About/About";
-function App() {
-  return (
-    <div className="App">
->>>>>>> b7099ca3403a4fd5b7243bcc0ebb4369a53a0939
       <AuthProvider>
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
-<<<<<<< HEAD
             <Route path="/register" element={<Register />} />
             <Route path="/about" element={<About />} />
 
             <Route path="/dashboard" element={<Dashboard />}>
               <Route path={`/dashboard/myOrders`} element={<MyOrder></MyOrder>} />
-              <Route path={`/dashboard/makeAdmin`} element={<MakeAdmin></MakeAdmin>}>
-              </Route>
+              <Route path={`/dashboard/addReview`} element={<AddReview></AddReview>} />
+              <Route path={`/dashboard/payment`} element={<Payment></Payment>} />
+              <Route path={`/dashboard/manageAllOrders`} element={<ManageAllOrders></ManageAllOrders>} />
+              <Route path={`/dashboard/addProduct`} element={<AddProduct></AddProduct>} />
+              <Route path={`/dashboard/makeAdmin`} element={<MakeAdmin></MakeAdmin>} />
+              <Route path={`/dashboard/manageProducts`} element={<ManageProducts></ManageProducts>} />
+              /
             </Route>
 
 
@@ -50,13 +40,6 @@ function App() {
           </Routes>
         </BrowserRouter>
       </AuthProvider>
-=======
-            <Route path="/about" element={<About />} />
-          </Routes>
-        </BrowserRouter>
-      </AuthProvider>
->>>>>>> d5a4f57eb664a647219214396c88b997eaf7cc20
->>>>>>> b7099ca3403a4fd5b7243bcc0ebb4369a53a0939
     </div>
   );
 }
