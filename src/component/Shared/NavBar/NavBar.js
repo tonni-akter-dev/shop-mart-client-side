@@ -100,7 +100,7 @@ const NavBar = () => {
                 style={{ color: "black", marginRight: "20px" }}
                 to="/login"
               >
-                <i class="fas fa-search"></i>
+                <i className="fas fa-search"></i>
               </NavLink>
               <NavLink
                 style={{ color: "black", marginRight: "20px" }}
