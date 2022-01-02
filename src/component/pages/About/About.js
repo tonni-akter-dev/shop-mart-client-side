@@ -47,7 +47,7 @@ const About = () => {
             </p>
             <div className="row">
               <div className="col-lg-6 col-sm-12">
-                <div class="elementor-widget-container">
+                <div className="elementor-widget-container">
                   <ul>
                     <li>Maecenas sed diam</li>
                     <li>Blandit sit amet non magna</li>
@@ -57,7 +57,7 @@ const About = () => {
                 </div>
               </div>
               <div className="col-lg-6 col-sm-12">
-                <div class="elementor-widget-container">
+                <div className="elementor-widget-container">
                   <ul>
                     <li>Maecenas sed diam</li>
                     <li>Blandit sit amet non magna</li>

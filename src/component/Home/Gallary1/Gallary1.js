@@ -3,47 +3,47 @@ import "./Gallary1.css";
 const Gallary1 = () => {
   return (
     <div>
-      <section class="container mt-5">
-        <div class="row">
-          <div class="col-lg-5 col-sm-12 card border-0 ">
-            <div class="over">
+      <section className="container mt-5">
+        <div className="row">
+          <div className="col-lg-5 col-sm-12 card border-0 ">
+            <div className="over">
               <img
-                class="sec51pic img-fluid"
+                className="sec51pic img-fluid"
                 src="https://i.ibb.co/txfy15s/1.jpg"
                 alt=""
               />
             </div>
-            <button type="button" class="btn btn-light womenbtn px-5 fw-bolder">
+            <button type="button" className="btn btn-light womenbtn px-5 fw-bolder">
               Women
             </button>
           </div>
-          <div class="col-lg-3 col-sm-12 card border-0 overflow-hidden ">
+          <div className="col-lg-3 col-sm-12 card border-0 overflow-hidden ">
             <img
-              class="mb-4 pic over img-fluid"
+              className="mb-4 pic over img-fluid"
               src="https://i.ibb.co/tKb4wgV/2.jpg"
               alt=""
             />
-            <button type="button" class="btn btn-light bagbtn px-5 fw-bolder">
+            <button type="button" className="btn btn-light bagbtn px-5 fw-bolder">
               Accessories
             </button>
             <img
               style={{ height: "335px" }}
-              class="pic img-fluid mb-5"
+              className="pic img-fluid mb-5"
               src="https://i.ibb.co/93fTC4X/3.jpg"
               alt=""
             />
-            <button type="button" class="btn btn-light shoebtn px-5 fw-bolder">
+            <button type="button" className="btn btn-light shoebtn px-5 fw-bolder">
               Footwear
             </button>
           </div>
-          <div class="col-lg-4 col-sm-12 card border-0 overflow-hidden ">
+          <div className="col-lg-4 col-sm-12 card border-0 overflow-hidden ">
             <img
-              class="pic img-fluid"
+              className="pic img-fluid"
               style={{ height: "650px" }}
               src="https://i.ibb.co/3WZyTW6/4.jpg"
               alt=""
             />
-            <button type="button" class="btn btn-light watchbtn px-5 fw-bolder">
+            <button type="button" className="btn btn-light watchbtn px-5 fw-bolder">
               Watches
             </button>
           </div>

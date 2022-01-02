@@ -44,7 +44,7 @@ const Portfolio = () => {
 
         <div>
             <NavBer />
-            <div class="portfolio-container container">
+            <div className="portfolio-container container">
                 <h1>Portfolio</h1>
                 <div className='portfolioLinkContainer'>
                     <Link className='portfolioLink' to="/">All</Link>
@@ -54,10 +54,10 @@ const Portfolio = () => {
                 <div className='row g-3'>
                     {
                         portfolioData.map((portfolio, index) =>
-                            <div key={index} class="box col-lg-4 col-md-6 col-sm-12">
+                            <div key={index} className="box col-lg-4 col-md-6 col-sm-12">
                                 <img src={portfolio.img} alt='' />
-                                <div class="portfolio-content">
-                                    <div class="wrap">
+                                <div className="portfolio-content">
+                                    <div className="wrap">
                                         <h1 style={{ textAlign: 'center', fontSize: '16px' }}>{portfolio.subtitle}</h1>
                                         <h1>{portfolio.title}</h1>
                                         <p style={{ textAlign: 'center' }}>
