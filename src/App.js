@@ -18,6 +18,7 @@ import Register from "./component/Register/Register";
 function App() {
   return (
     <div className="App">
+
       <AuthProvider>
         <BrowserRouter>
           <Routes>
