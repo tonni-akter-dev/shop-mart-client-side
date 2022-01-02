@@ -1,5 +1,5 @@
-import Checkbox from '@mui/material/Checkbox';
-import { pink } from '@mui/material/colors';
+import Checkbox from "@mui/material/Checkbox";
+import { pink } from "@mui/material/colors";
 import React, { useState } from "react";
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import "./NavBar.css";
@@ -30,7 +30,6 @@ const NavBar = () => {
                   textDecoration: "none",
                   margin: "10px",
                 }}
-
                 to="/"
               >
                 Home
@@ -65,7 +64,6 @@ const NavBar = () => {
               >
                 Shop
               </NavLink>
-
               <NavDropdown title="Pages" id="basic-nav-dropdown">
                 <NavDropdown.Item href="/about">
                   <NavLink
@@ -116,37 +114,6 @@ const NavBar = () => {
                   </NavLink>
                 </NavDropdown.Item>
               </NavDropdown>
-
-              <NavLink
-                style={{
-                  color: "black",
-                  textDecoration: "none",
-                  margin: "10px",
-                }}
-                to="/dashboard"
-              >
-                Pages
-              </NavLink>
-              <NavLink
-                style={{
-                  color: "black",
-                  textDecoration: "none",
-                  margin: "10px",
-                }}
-                to="/"
-              >
-                Blog
-              </NavLink>
-              {/* <NavLink
-                style={{
-                  color: "black",
-                  textDecoration: "none",
-                  margin: "10px",
-                }}
-                to="/about"
-              >
-                ABOUT US
-              </NavLink> */}
               <NavLink
                 style={{
                   color: "black",
@@ -193,7 +160,6 @@ const NavBar = () => {
                       ></button>
                     </div>
 
-
                     <div class="modal-body">
                       {/* Login */}
                       <div>
@@ -207,9 +173,7 @@ const NavBar = () => {
                             checked={toggle}
                             onChange={toggleChecked}
                             {...label}
-
                             defaultChecked
-
                             sx={{
                               color: pink[800],
                               "&.Mui-checked": {
