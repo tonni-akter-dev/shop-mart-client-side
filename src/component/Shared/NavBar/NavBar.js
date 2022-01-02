@@ -101,6 +101,18 @@ const NavBar = () => {
                     Blog
                   </NavLink>
                 </NavDropdown.Item>
+                <NavDropdown.Item href="/blog">
+                  <NavLink
+                    style={{
+                      color: "black",
+                      textDecoration: "none",
+                      margin: "10px",
+                    }}
+                    to="/portfolio"
+                  >
+                    Portfolio
+                  </NavLink>
+                </NavDropdown.Item>
                 <NavDropdown.Item href="/error">
                   <NavLink
                     style={{
@@ -136,31 +148,31 @@ const NavBar = () => {
               {/* login */}
               <button
                 type="button"
-                class="btn"
+                className="btn"
                 data-bs-toggle="modal"
                 data-bs-target="#exampleModal"
               >
                 <i className="far fa-user"></i>
               </button>
               <div
-                class="modal fade"
+                className="modal fade"
                 id="exampleModal"
-                tabindex="-1"
+                tabIndex="-1"
                 aria-labelledby="exampleModalLabel"
                 aria-hidden="true"
               >
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
+                <div className="modal-dialog">
+                  <div className="modal-content">
+                    <div className="modal-header">
                       <button
                         type="button"
-                        class="btn-close"
+                        className="btn-close"
                         data-bs-dismiss="modal"
                         aria-label="Close"
                       ></button>
                     </div>
 
-                    <div class="modal-body">
+                    <div className="modal-body">
                       {/* Login */}
                       <div>
                         {!toggle ? <Login /> : <Register />}
