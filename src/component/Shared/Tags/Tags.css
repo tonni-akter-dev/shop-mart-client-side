@@ -1,0 +1,16 @@
+.tags {
+}
+.tags ul {
+  list-style-type: none;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.tags ul li {
+  margin: 3px;
+  padding: 5px 20px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+}

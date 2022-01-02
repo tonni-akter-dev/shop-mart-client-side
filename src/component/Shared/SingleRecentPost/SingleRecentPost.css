@@ -1,0 +1,21 @@
+.recent-blog {
+  display: flex;
+}
+.recent-blog-img {
+  width: 40%;
+}
+.recent-blog-img img {
+  width: 100%;
+  height: 100%;
+}
+.recent-blog-content {
+  width: 60%;
+}
+.recent-blog .card-title {
+  color: #2c2c2c;
+}
+.recent-blog p {
+  margin-bottom: 0px;
+  color: #bcbcbc !important;
+  font-size: 12px;
+}
