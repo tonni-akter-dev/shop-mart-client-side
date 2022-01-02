@@ -67,7 +67,6 @@ const Portfolio = () => {
                                             <IconButton style={{ color: 'white' }} aria-label="share">
                                                 <ShareIcon />
                                             </IconButton>
-
                                         </p>
                                     </div>
                                 </div>
