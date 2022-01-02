@@ -6,6 +6,7 @@ import Feature from "../Feature/Feature";
 import Services from "../Services/Services";
 import Gallary1 from "../Gallary1/Gallary1";
 import Blog1 from "../Blog1/Blog1";
+import ReviewPost from "../ReviewPost/ReviewPost";
 const Home = () => {
   return (
     <div>
@@ -13,7 +14,8 @@ const Home = () => {
       <Banner />
       <Gallary1 />
       <Services />
-      <Blog1/>
+      <Blog1 />
+      <ReviewPost />
       <Feature />
       <Footer />
     </div>
