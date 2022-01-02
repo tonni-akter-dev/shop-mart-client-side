@@ -12,6 +12,7 @@ import Payment from "./component/Dashboard/Payment/Payment";
 import Home from "./component/Home/Home/Home";
 import About from "./component/pages/About/About";
 import Contact from "./component/pages/Contact/Contact";
+import Portfolio from "./component/pages/Portfolio/Portfolio";
 import Register from "./component/Register/Register";
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
             <Route path="/home" element={<Home />} />
             <Route path="/register" element={<Register />} />
             <Route path="/about" element={<About />} />
+            <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/dashboard" element={<Dashboard />}>
               <Route path={`/dashboard/myOrders`} element={<MyOrder></MyOrder>} />

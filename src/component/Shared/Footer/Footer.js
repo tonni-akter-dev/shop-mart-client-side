@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <div>
+        <div style={{ paddingTop: '50px' }}>
             <footer
                 className="text-center text-lg-start text-white"
                 style={{ backgroundColor: "#45526e" }}
