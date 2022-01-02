@@ -1,12 +1,12 @@
+import Checkbox from '@mui/material/Checkbox';
+import { pink } from '@mui/material/colors';
 import React, { useState } from "react";
-
 import { Container, Nav, Navbar } from "react-bootstrap";
-import "./NavBar.css";
 import { NavLink } from "react-router-dom";
 import Login from "../../Register/Login/Login";
 import Register from "../../Register/Register";
-import { pink } from '@mui/material/colors';
-import Checkbox from '@mui/material/Checkbox';
+import "./NavBar.css";
+
 
 const NavBar = () => {
   const [toggle, setToggle] = useState(false);
@@ -95,7 +95,7 @@ const NavBar = () => {
               >
                 ABOUT US
               </NavLink> */}
-              {/* <NavLink
+              <NavLink
                 style={{
                   color: "black",
                   textDecoration: "none",
@@ -103,8 +103,8 @@ const NavBar = () => {
                 }}
                 to="/dashboard"
               >
-                DASHBOARD
-              </NavLink> */}
+                Dashboard
+              </NavLink>
             </Nav>
             <Nav>
               <NavLink
