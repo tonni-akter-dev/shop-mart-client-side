@@ -6,6 +6,7 @@ import Feature from "../Feature/Feature";
 import Services from "../Services/Services";
 import Gallary1 from "../Gallary1/Gallary1";
 import Blog1 from "../Blog1/Blog1";
+import ReviewPost from "../ReviewPost/ReviewPost";
 import { Link, Outlet } from "react-router-dom";
 import Products from "../../ProductsComponents/Products/Products";
 
@@ -63,6 +64,7 @@ const Home = () => {
       <Products />
       <Services />
       <Blog1 />
+      <ReviewPost />
       <Feature />
       <Footer />
     </div>
