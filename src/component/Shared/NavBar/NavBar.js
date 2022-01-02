@@ -13,9 +13,7 @@ const NavBar = () => {
   const { user, logout } = useAuth();
   const [toggle, setToggle] = useState(false);
   const toggleChecked = () => setToggle((value) => !value);
-
   const label = { inputProps: { "aria-label": "Checkbox demo" } };
-
   return (
     <div>
       <Navbar expand="lg">
@@ -70,45 +68,55 @@ const NavBar = () => {
 
               <NavDropdown title="Pages" id="basic-nav-dropdown">
                 <NavDropdown.Item href="/about">
-                  <NavLink to="/about"  style={{
-                  color: "black",
-                  textDecoration: "none",
-                  margin: "10px",
-                }}>About us</NavLink>
+                  <NavLink
+                    to="/about"
+                    style={{
+                      color: "black",
+                      textDecoration: "none",
+                      margin: "10px",
+                    }}
+                  >
+                    About us
+                  </NavLink>
                 </NavDropdown.Item>
                 <NavDropdown.Item href="/contact">
-                  <NavLink  style={{
-                  color: "black",
-                  textDecoration: "none",
-                  margin: "10px",
-                }} to="/contact">Contact us</NavLink>
+                  <NavLink
+                    style={{
+                      color: "black",
+                      textDecoration: "none",
+                      margin: "10px",
+                    }}
+                    to="/contact"
+                  >
+                    Contact us
+                  </NavLink>
                 </NavDropdown.Item>
                 <NavDropdown.Item href="/blog">
-                <NavLink
-                style={{
-                  color: "black",
-                  textDecoration: "none",
-                  margin: "10px",
-                }}
-                to="/blog"
-              >
-                Blog
-              </NavLink>
+                  <NavLink
+                    style={{
+                      color: "black",
+                      textDecoration: "none",
+                      margin: "10px",
+                    }}
+                    to="/blog"
+                  >
+                    Blog
+                  </NavLink>
                 </NavDropdown.Item>
                 <NavDropdown.Item href="/error">
-                <NavLink
-                style={{
-                  color: "black",
-                  textDecoration: "none",
-                  margin: "10px",
-                }}
-                to="/error"
-              >
-                Not Found 404
-              </NavLink>
+                  <NavLink
+                    style={{
+                      color: "black",
+                      textDecoration: "none",
+                      margin: "10px",
+                    }}
+                    to="/error"
+                  >
+                    Not Found 404
+                  </NavLink>
                 </NavDropdown.Item>
               </NavDropdown>
-             
+
               <NavLink
                 style={{
                   color: "black",
