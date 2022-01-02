@@ -25,7 +25,7 @@ const Register = () => {
     <div>
       <div>
         {!isLoading && (
-          <form onSubmit={handleLoginSubmit} className="login-form mb-5">
+          <form onSubmit={handleLoginSubmit} className="login-form">
             <h4>Please Register</h4>
             <input
               className=" container-fluid"
@@ -35,7 +35,7 @@ const Register = () => {
               label="Your Name"
               name="name"
               onChange={handleOnchange}
-            />{" "}
+            />
             <br /><br />
             <input
               className=" container-fluid"
@@ -46,7 +46,7 @@ const Register = () => {
               type="email"
               name="email"
               onChange={handleOnchange}
-            />{" "}
+            />
             <br /><br />
             <input
               className=" container-fluid"
@@ -58,7 +58,7 @@ const Register = () => {
               variant="standard"
               name="password"
               onChange={handleOnchange}
-            />{" "}
+            />
             <br /><br />
             <input
               className=" container-fluid"
@@ -68,7 +68,7 @@ const Register = () => {
               label="Retype Your password"
               name="password2"
               onChange={handleOnchange}
-            />{" "}
+            />
             <br /><br />
             <button type="submit" className="btn btn-dark container-fluid">
               Register

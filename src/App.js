@@ -11,11 +11,14 @@ import MyOrder from "./component/Dashboard/MyOrder/MyOrder";
 import Payment from "./component/Dashboard/Payment/Payment";
 import Home from "./component/Home/Home/Home";
 import About from "./component/pages/About/About";
+import Contact from "./component/pages/Contact/Contact";
+import Portfolio from "./component/pages/Portfolio/Portfolio";
 import Register from "./component/Register/Register";
 
 function App() {
   return (
     <div className="App">
+
       <AuthProvider>
         <BrowserRouter>
           <Routes>
@@ -23,7 +26,8 @@ function App() {
             <Route path="/home" element={<Home />} />
             <Route path="/register" element={<Register />} />
             <Route path="/about" element={<About />} />
-
+            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/contact" element={<Contact />} />
             <Route path="/dashboard" element={<Dashboard />}>
               <Route path={`/dashboard/myOrders`} element={<MyOrder></MyOrder>} />
               <Route path={`/dashboard/addReview`} element={<AddReview></AddReview>} />
@@ -32,11 +36,7 @@ function App() {
               <Route path={`/dashboard/addProduct`} element={<AddProduct></AddProduct>} />
               <Route path={`/dashboard/makeAdmin`} element={<MakeAdmin></MakeAdmin>} />
               <Route path={`/dashboard/manageProducts`} element={<ManageProducts></ManageProducts>} />
-
             </Route>
-
-
-
           </Routes>
         </BrowserRouter>
       </AuthProvider>
