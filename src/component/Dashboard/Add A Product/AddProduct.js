@@ -7,7 +7,7 @@ const AddProduct = () => {
 
 
    const onSubmit = data => {
-      fetch('https://fathomless-taiga-77170.herokuapp.com/addProduct', {
+      fetch('http://localhost:4000/addProduct', {
          method: "POST",
          headers: {
             "content-type": "application/json"
