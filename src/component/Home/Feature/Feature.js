@@ -14,6 +14,7 @@ const Feature = () => {
     { img: Img_3 },
     { img: Img_4 },
     { img: Img_5 },
+<<<<<<< HEAD
     { img: Img_6 },
   ];
   return (
@@ -27,6 +28,25 @@ const Feature = () => {
             alt=""
           />
         ))}
+=======
+    { img: Img_6 }
+
+  ]
+  return (
+    <div className='container'>
+      <div className='row py-3'>
+        {
+          feature.map((f, index) =>
+            <img
+              key={index}
+              className='featureImg col-lg-2 img-fluid m-0 p-0'
+              src={f.img} alt="" />
+
+
+          )
+        }
+
+>>>>>>> 97b35ef3bf6dbe71c1dfd3a6bef352ff368df27a
       </div>
     </div>
   );
