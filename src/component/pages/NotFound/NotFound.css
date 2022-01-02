@@ -1,0 +1,22 @@
+.error-bg{
+    background-image: url("https://i.ibb.co/G0XYC07/bg-404.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:100vh;
+    color:white
+}
+.text-404{
+    font-size: 310px;
+    /* margin-bottom: 10px!important; */
+}
+.page-title{
+    font-size:60px;
+    line-height: normal;
+    font-weight: 400;
+}
+.btn-white{
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
