@@ -43,7 +43,7 @@ const Dashboard = () => {
 
                   <li><i className="fas fa-home"></i> <Link to="/home"> Home</Link></li>
                   <li><i className="fas fa-align-justify"></i> <Link to="/dashboard/myOrders">MyOrders</Link></li>
-                  <li><i className="fas fa-pen-square"></i> <Link to="/dashboard/addProduct">Add a Review</Link></li>
+                  <li><i className="fas fa-pen-square"></i> <Link to="/dashboard/addReview">Add a Review</Link></li>
                   <li><i className="far fa-credit-card"></i><Link to="/dashboard/payment">Payment</Link></li>
 
 
