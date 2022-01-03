@@ -31,6 +31,7 @@ const MyOrder = () => {
                   fetch(`http://localhost:4000/myOrder/${user?.email}`)
                      .then(res => res.json())
                      .then(data => setProducts(data))
+
                setOpen(true)
             }
 
