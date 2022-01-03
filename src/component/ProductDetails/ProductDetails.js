@@ -6,7 +6,7 @@ const ProductDetails = () => {
   let { id } = useParams();
   const [productDetail, setProductDetail] = useState({});
   useEffect(() => {
-    fetch(`http://localhost:4000/homeAll/${id}`)
+    fetch(`https://mighty-reef-87460.herokuapp.com/homeProducts/${id}`)
       .then((res) => res.json())
       .then((data) => setProductDetail(data));
   }, [id]);
@@ -161,26 +161,6 @@ const ProductDetails = () => {
             />
           </Col>
         </Row>
-      </div>
-      {/* details */}
-      <div className="text-center">
-        <p className="details" style={{ fontWeight: "bold" }}>
-          PRODUCT DETAILS
-        </p>
-        <span className="details1">
-          Inspired by traditional blockprinting techniques in India, our own
-          in-house design is the vibrant pattern that every closet needs. That's
-          why we crafted our party standout tiered maxi dress in this royal
-          blue-and-yellow print: It's lightweight, lined and will look great at
-          all your most festive summer events.
-        </span>{" "}
-        <br />
-        <img
-          src="https://i.ibb.co/fqDrrQr/description3.jpg"
-          className="img-fluid mt-4 mb-4"
-          alt=""
-        />
-        <hr />
       </div>
     </div>
   );

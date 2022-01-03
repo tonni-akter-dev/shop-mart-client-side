@@ -5,7 +5,6 @@ import useAuth from "../../hook/useAuth";
 const PrivateRoute = ({ children, ...rest }) => {
   let { user, isLoading } = useAuth();
   let location = useLocation();
-
   if (isLoading) {
     return (
       <Spinner animation="border" role="status">

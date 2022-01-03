@@ -16,6 +16,7 @@ import NotFound from "./component/pages/NotFound/NotFound";
 import Portfolio from "./component/pages/Portfolio/Portfolio";
 import Register from "./component/Register/Register";
 import ProductDetails from './component/ProductDetails/ProductDetails';
+import Blogs from "./component/Routes/Blogs/Blogs/Blogs";
 function App() {
   return (
     <div className="App">
@@ -35,6 +36,7 @@ function App() {
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/error" element={<NotFound />} />
+            <Route path="/blog" element={<Blogs />} />
             <Route path="/dashboard" element={<Dashboard />}>
               <Route
                 path={`/dashboard/myOrders`}
