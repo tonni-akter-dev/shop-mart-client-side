@@ -6,13 +6,15 @@ import useAuth from "../../hook/useAuth";
 import NavBar from "../../Shared/NavBar/NavBar";
 const Order = () => {
   let { id } = useParams();
+  const { user } = useAuth();
   const [productDetail, setProductDetail] = useState({});
   useEffect(() => {
     fetch(`http://localhost:4000/homeProducts/${id}`)
       .then((res) => res.json())
       .then((data) => setProductDetail(data));
   }, [id]);
-  const { user } = useAuth();
+
+
   const { register, handleSubmit, reset, setValue } = useForm();
   const onSubmit = (data) => {
     console.log(data);
@@ -36,9 +38,12 @@ const Order = () => {
   setValue("name", user.displayName);
   setValue("email", user.email);
   setValue("title", productDetail.title);
-  setValue("desc", productDetail.ProductDetails);
+  setValue("detailS", productDetail.detailS);
   setValue("img", productDetail.img);
+  setValue("price", productDetail.price);
   setValue("status", "pending");
+  setValue("statusColor", "yellow");
+  setValue("date", new Date().toLocaleDateString);
   return (
     <div>
       <NavBar />
@@ -83,9 +88,20 @@ const Order = () => {
               backgroundColor: "rgba(0, 0, 0, 0.01)",
             }}
             type="text"
-            {...register("desc", { required: true })}
+            {...register("detailS", { required: true })}
+
+          />{" "}
+          <input
+            placeholder="Price"
+            style={{
+              color: "white",
+              backgroundColor: "rgba(0, 0, 0, 0.01)",
+            }}
+            type="text"
+            {...register("price", { required: true })}
           />{" "}
           <br />
+
           {/* address */}
           <input
             placeholder="Address"
