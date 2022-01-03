@@ -38,7 +38,6 @@ const AddProduct = () => {
             <input required Placeholder="Image url/link" type="text" {...register("img",)} />
             <input required Placeholder="Color" type="text" {...register("color",)} />
             <input required Placeholder="Reviews" type="number" {...register("review",)} />
-
             <textarea
                {...register("detailS", { required: true })}
                placeholder="Details" />

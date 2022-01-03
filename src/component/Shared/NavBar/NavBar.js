@@ -60,7 +60,7 @@ const NavBar = () => {
                   textDecoration: "none",
                   margin: "10px",
                 }}
-                to="/features"
+                to="/"
               >
                 Shop
               </NavLink>
