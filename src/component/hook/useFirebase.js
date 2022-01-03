@@ -1,14 +1,9 @@
-import init from "./../firebase/firebase.init";
 import {
-  getAuth,
-  signInWithPopup,
-  GoogleAuthProvider,
-  createUserWithEmailAndPassword,
-  signOut,
-  onAuthStateChanged,
-  signInWithEmailAndPassword,
+  createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, onAuthStateChanged,
+  signInWithEmailAndPassword, signInWithPopup, signOut
 } from "firebase/auth";
 import { useEffect, useState } from "react";
+import init from "./../firebase/firebase.init";
 init();
 const useFirebase = () => {
   const [user, setUser] = useState({});
@@ -54,12 +49,13 @@ const useFirebase = () => {
     return () => unsubscribe;
   }, [auth]);
 
-  const logout = () => {
+  const logout = (navigate, location) => {
     setIsLoading(true);
     signOut(auth)
       .then(() => {
         setError("");
         setUser({});
+        navigate(location?.state?.from || '/')
       })
       .catch((error) => {
         setError(error.message);
