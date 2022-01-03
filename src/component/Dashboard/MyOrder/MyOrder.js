@@ -48,7 +48,7 @@ const MyOrder = () => {
    };
 
    return (
-      <div >
+      <div className='container'>
 
          {products?.length === 0 ?
             <h4 className=' text-pink-800 text-center'>No order was found for you, please order first</h4>

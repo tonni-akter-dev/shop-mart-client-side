@@ -10,7 +10,7 @@ const Products = () => {
       .then((data) => setHomeProducts(data));
   }, []);
   return (
-    <div>
+    <div className=" container">
       <h2>All Products</h2>
       <Row lg={4}>
         {homeProducts.map((homeProduct) => (
