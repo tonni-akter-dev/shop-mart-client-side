@@ -1,5 +1,4 @@
 import React from "react";
-// import "./Product.css";
 import { Card, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 const Shop = ({allProduct}) => {

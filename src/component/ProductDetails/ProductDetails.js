@@ -23,7 +23,7 @@ const ProductDetails = () => {
   }
 
   useEffect(() => {
-    fetch(`http://localhost:4000/homeProducts/${id}`)
+    fetch(`https://mighty-reef-87460.herokuapp.com/homeProducts/${id}`)
       .then((res) => res.json())
       .then((data) => setProductDetail(data));
   }, [id]);

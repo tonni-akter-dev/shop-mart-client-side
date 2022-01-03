@@ -1,13 +1,10 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
 import './AddProduct.css';
-
 const AddProduct = () => {
    const { register, handleSubmit, reset } = useForm();
-
-
    const onSubmit = data => {
-      fetch('https://mighty-reef-87460.herokuapp.com/addProduct', {
+      fetch('https://mighty-reef-87460.herokuapp.com/addToProduct', {
          method: "POST",
          headers: {
             "content-type": "application/json"
@@ -24,9 +21,6 @@ const AddProduct = () => {
          })
 
    };
-
-
-
    return (
       <div>
 

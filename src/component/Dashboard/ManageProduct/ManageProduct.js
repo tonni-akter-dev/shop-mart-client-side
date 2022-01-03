@@ -1,11 +1,10 @@
 import React from "react";
-// import "./Product.css";
 import { Card, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
-const Product = (props) => {
-  const { img, title, price, _id } = props.homeProduct;
+const ManageProduct = ({ allProduct,handleDeletBtn }) => {
+  const { img, title, price, _id } = allProduct;
   return (
-    <div className="mt-5">
+    <div className=" mt-5">
       <div>
         <Col sm={12}>
           <Card style={{ height: "380px" }}>
@@ -38,18 +37,14 @@ const Product = (props) => {
                   <Link to={`/homeProducts/${_id}`}>Details</Link>
                 </span>
                 <span style={{ fontSize: "18px" }}>
-                  <Link
-                    style={{
-                      fontSize: "18px",
-                      color: "black",
-                      fontWeight: "bold ",
-                      textDecoration: "none",
-                    }}
-                    to={`/order/${_id}`}
-                  >
-                    Order Now{" "}
-                  </Link>
+                <button
+              onClick={() => handleDeletBtn(_id)}
+              className="btn btn-dark"
+            >
+              Delete
+            </button>
                 </span>
+                
               </Card.Title>
             </Card.Body>
           </Card>
@@ -59,4 +54,4 @@ const Product = (props) => {
   );
 };
 
-export default Product;
+export default ManageProduct;
