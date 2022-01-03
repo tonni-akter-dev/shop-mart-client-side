@@ -31,7 +31,6 @@ const MyOrder = () => {
                   fetch(`https://mighty-reef-87460.herokuapp.com/myOrder/${user?.email}`)
                      .then(res => res.json())
                      .then(data => setProducts(data))
-
                setOpen(true)
             }
 
