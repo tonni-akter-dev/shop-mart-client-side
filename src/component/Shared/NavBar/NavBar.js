@@ -145,6 +145,7 @@ const NavBar = () => {
               >
                 <i className="fas fa-search"></i>
               </NavLink>
+
               {/* login */}
               <button
                 type="button"
@@ -161,9 +162,12 @@ const NavBar = () => {
                 aria-labelledby="exampleModalLabel"
                 aria-hidden="true"
               >
-                <div className="modal-dialog">
-                  <div className="modal-content">
-                    <div className="modal-header">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title mx-auto" id="exampleModalLabel">
+                        Login
+                      </h5>
                       <button
                         type="button"
                         className="btn-close"

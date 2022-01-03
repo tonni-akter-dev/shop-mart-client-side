@@ -15,11 +15,6 @@ import Contact from "./component/pages/Contact/Contact";
 import NotFound from "./component/pages/NotFound/NotFound";
 import Portfolio from "./component/pages/Portfolio/Portfolio";
 import Register from "./component/Register/Register";
-import All from "./component/ProductsComponents/HomeProducts/All/All";
-import Clothes from "./component/ProductsComponents/HomeProducts/Clothes/Clothes";
-import Shoes from "./component/ProductsComponents/HomeProducts/Shoes/Shoes";
-import Bags from "./component/ProductsComponents/HomeProducts/Bags/Bags";
-import PrivateRoute from "./component/firebase/PrivateRoute/PrivateRoute";
 import ProductDetails from './component/ProductDetails/ProductDetails';
 function App() {
   return (

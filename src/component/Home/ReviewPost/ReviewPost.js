@@ -49,7 +49,7 @@ const ReviewPost = (props) => {
 
                     <Carousel
                         responsive={responsive}
-                        className="py-20 px-1"
+                        className="carousel"
                         swipeable={true}
                         draggable={true}
                         showDots={true}

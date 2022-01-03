@@ -1,0 +1,10 @@
+.category-box ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+.category-box ul li {
+  margin-bottom: 6px;
+}
+.category-box ul a {
+  text-decoration: none;
+}
