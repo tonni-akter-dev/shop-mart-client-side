@@ -18,6 +18,7 @@ import Register from "./component/Register/Register";
 import ProductDetails from "./component/ProductDetails/ProductDetails";
 import Blogs from "./component/Routes/Blogs/Blogs/Blogs";
 import Order from "./component/ProductsComponents/Order/Order";
+import Shops from "./component/Routes/ShopRoutes/Shops/Shops";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/homeProducts/:id" element={<ProductDetails />} />
+           
             <Route path="/order/:id" element={<Order />} />
 
             <Route path="/" element={<Home />} />
@@ -36,6 +38,9 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/error" element={<NotFound />} />
             <Route path="/blog" element={<Blogs />} />
+            {/* /shop */}
+            <Route path="/shop" element={<Shops />} />
+            {/* dashboard */}
             <Route path="/dashboard" element={<Dashboard />}>
               <Route
                 path={`/dashboard/myOrders`}

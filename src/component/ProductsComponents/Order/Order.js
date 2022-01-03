@@ -27,13 +27,14 @@ const Order = () => {
     })
       .then((res) => {
         if (res.data.insertedId) {
-          reset();
+         
         } else {
         }
       })
       .catch((err) => {
         console.log(err.message);
       });
+      reset();
   };
   setValue("name", user.displayName);
   setValue("email", user.email);
@@ -61,6 +62,7 @@ const Order = () => {
           <br />
           {/* email */}
           <input
+          disabled
             placeholder="email"
             style={{
               color: "white",
