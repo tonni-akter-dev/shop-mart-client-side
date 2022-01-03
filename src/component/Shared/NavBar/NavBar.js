@@ -62,6 +62,7 @@ const NavBar = () => {
                 }}
                 to="/"
               >
+
                 Shop
               </NavLink>
               <NavDropdown title="Pages" id="basic-nav-dropdown">
