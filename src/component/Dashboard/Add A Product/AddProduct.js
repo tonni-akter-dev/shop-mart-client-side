@@ -19,6 +19,7 @@ const AddProduct = () => {
             if (result.acknowledged) {
                alert("The product is successfully added!!")
                reset()
+
             }
          })
 
