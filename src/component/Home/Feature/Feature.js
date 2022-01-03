@@ -8,6 +8,7 @@ import Img_5 from "./FeatureImg/ins_5_02-300x300.jpg.webp";
 import Img_6 from "./FeatureImg/ins_6_01-300x300.jpg.webp";
 
 const Feature = () => {
+<<<<<<< HEAD
   const feature = [
     { img: Img_1 },
     { img: Img_2 },
@@ -26,14 +27,29 @@ const Feature = () => {
               key={index}
               className='featureImg col-lg-2 img-fluid m-0 p-0'
               src={f.img} alt="" />
+=======
+    const feature = [
+        { img: Img_1 },
+        { img: Img_2 },
+        { img: Img_3 },
+        { img: Img_4 },
+        { img: Img_5 },
+        { img: Img_6 }
+>>>>>>> b7ff824673e165f08b0c52f05b9e8291d65c5553
 
 
           )
         }
 
+<<<<<<< HEAD
       </div>
     </div>
   );
+=======
+            </div>
+        </div>
+    );
+>>>>>>> b7ff824673e165f08b0c52f05b9e8291d65c5553
 };
 
 export default Feature;

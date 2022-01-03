@@ -2,6 +2,7 @@ import Checkbox from "@mui/material/Checkbox";
 import { pink } from "@mui/material/colors";
 import React, { useState } from "react";
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
+<<<<<<< HEAD
 import "./NavBar.css";
 import { NavLink } from "react-router-dom";
 import Login from "../../Register/Login/Login";
@@ -14,6 +15,26 @@ const NavBar = () => {
   const [toggle, setToggle] = useState(false);
   const toggleChecked = () => setToggle((value) => !value);
   const label = { inputProps: { "aria-label": "Checkbox demo" } };
+=======
+import { NavLink, useNavigate } from "react-router-dom";
+import useAuth from "../../hook/useAuth";
+import "./NavBar.css";
+const NavBar = () => {
+  const [loginData, setLoginData] = useState({});
+  const { loginUser } = useAuth();
+  let navigate = useNavigate();
+  const handleOnchange = (e) => {
+    const field = e.target.name;
+    const value = e.target.value;
+    const newLoginData = { ...loginData };
+    newLoginData[field] = value;
+    setLoginData(newLoginData);
+  };
+  const handleLoginSubmit = (e) => {
+    loginUser(loginData?.email, loginData?.password, navigate);
+    e.preventDefault();
+  };
+>>>>>>> b7ff824673e165f08b0c52f05b9e8291d65c5553
   return (
     <div>
       <Navbar expand="lg">
@@ -145,6 +166,7 @@ const NavBar = () => {
               >
                 <i className="fas fa-search"></i>
               </NavLink>
+
               {/* login */}
               <button
                 type="button"
@@ -161,9 +183,18 @@ const NavBar = () => {
                 aria-labelledby="exampleModalLabel"
                 aria-hidden="true"
               >
+<<<<<<< HEAD
                 <div className="modal-dialog">
                   <div className="modal-content">
                     <div className="modal-header">
+=======
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title mx-auto" id="exampleModalLabel">
+                        Login
+                      </h5>
+>>>>>>> b7ff824673e165f08b0c52f05b9e8291d65c5553
                       <button
                         type="button"
                         className="btn-close"
@@ -171,6 +202,7 @@ const NavBar = () => {
                         aria-label="Close"
                       ></button>
                     </div>
+<<<<<<< HEAD
 
                     <div className="modal-body">
                       {/* Login */}
@@ -195,6 +227,57 @@ const NavBar = () => {
                           />
                         </span>
                       </div>
+=======
+                    <div class="modal-body">
+                      {/* login form */}
+                      <form className="login-form" onSubmit={handleLoginSubmit}>
+                        <h4>Login Form</h4>
+                        <input
+                          className="field"
+                          required
+                          type="email"
+                          name="email"
+                          placeholder="Your Email"
+                          onChange={handleOnchange}
+                        />
+                        <input
+                          className="field"
+                          required
+                          placeholder="Your password"
+                          type="password"
+                          name="password"
+                          onChange={handleOnchange}
+                        />{" "}
+                        <br />
+                        <button className="btn btn-dark" type="submit">
+                          Login
+                        </button>{" "}
+                        <br />
+                        <NavLink
+                          to="/register"
+                          style={{
+                            textDecoration: "none",
+                            color: "black",
+                            fontWeight: "bolder",
+                            paddingLeft: "10px",
+                          }}
+                        >
+                          New User? Please Register
+                        </NavLink>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                      <button type="button" class="btn btn-primary">
+                        Save changes
+                      </button>
+>>>>>>> b7ff824673e165f08b0c52f05b9e8291d65c5553
                     </div>
                   </div>
                 </div>

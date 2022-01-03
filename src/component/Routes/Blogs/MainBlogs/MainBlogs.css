@@ -1,0 +1,15 @@
+.blogs-sidebar {
+  margin-top: 100px;
+  margin-bottom: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+.blog {
+  display: flex;
+}
+.blogs {
+  width: 68%;
+}
+.sidebar {
+  width: 28%;
+}
