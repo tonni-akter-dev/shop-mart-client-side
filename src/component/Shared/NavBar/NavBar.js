@@ -2,11 +2,10 @@ import Checkbox from "@mui/material/Checkbox";
 import { pink } from "@mui/material/colors";
 import React, { useState } from "react";
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
-import "./NavBar.css";
 import { NavLink } from "react-router-dom";
+import useAuth from "../../hook/useAuth";
 import Login from "../../Register/Login/Login";
 import Register from "../../Register/Register";
-import useAuth from "../../hook/useAuth";
 import "./NavBar.css";
 
 const NavBar = () => {
