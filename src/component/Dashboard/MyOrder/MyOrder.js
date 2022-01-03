@@ -16,7 +16,7 @@ const MyOrder = () => {
    const [products, setProducts] = useState([])
    const [open, setOpen] = React.useState(false);
    useEffect(() => {
-      fetch(`https://mighty-reef-87460.herokuapp.com/myOrder/${user?.email}`)
+      fetch(`http://localhost:4000/myOrder/${user?.email}`)
          .then(res => res.json())
          .then(data => setProducts(data))
    }, [user?.email])
@@ -24,17 +24,15 @@ const MyOrder = () => {
 
    const handleMyOrderDelete = (id) => {
       window.confirm("Are you sure you wish to delete this item?") &&
-         axios.delete(`https://mighty-reef-87460.herokuapp.com/myOrderDelete/${id}`)
+         axios.delete(`http://localhost:4000/myOrderDelete/${id}`)
             .then(res => {
 
                res.data.deletedCount &&
-                  fetch(`https://mighty-reef-87460.herokuapp.com/myOrder/${user?.email}`)
+                  fetch(`http://localhost:4000/myOrder/${user?.email}`)
                      .then(res => res.json())
                      .then(data => setProducts(data))
-
                setOpen(true)
             }
-
             )
 
    }
@@ -48,7 +46,7 @@ const MyOrder = () => {
    };
 
    return (
-      <div className='container'>
+      <div >
 
          {products?.length === 0 ?
             <h4 className=' text-pink-800 text-center'>No order was found for you, please order first</h4>
@@ -60,22 +58,15 @@ const MyOrder = () => {
             products?.length === 0 && <img src="https://i.ibb.co/tq9K32W/Helium-10-xray.jpg" alt="" />
          }
          <div className="row row-cols-1 row-cols-sm-4  row-cols-md-2 row-cols-lg-4 g-4">
-
-
             {
                products?.map(product => <div key={product?._id} className="col ">
-
-
-
                   <Box className="card h-100">
-
-
                      <Box sx={{ height: 290, overflow: 'hidden' }}>
                         <img className='img-fluid' src={product?.img} alt="..." />
                      </Box>
                      <div className="card-body">
                         <h5 className="card-title">{product?.title}</h5>
-                        <p className="card-text">{product?.detailS}</p>
+                        <p className="card-text">{product?.detailS.slice(0,100)}</p>
                         <typography>
                            ${product?.price}
                         </typography>

@@ -53,12 +53,6 @@ const ManageALlOrder = (props) => {
             </TableCell>
         </TableRow>
 
-
-
-
-
-
-
     );
 };
 
