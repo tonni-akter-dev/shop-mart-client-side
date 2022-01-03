@@ -1,12 +1,27 @@
 import React, { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
-import "./ProductDetails.css";
 import { Col, Row } from "react-bootstrap";
-import NavBar from "../Shared/NavBar/NavBar";
+import { Link, useParams } from "react-router-dom";
 import Footer from "../Shared/Footer/Footer";
+import NavBar from "../Shared/NavBar/NavBar";
+import "./ProductDetails.css";
 const ProductDetails = () => {
   let { id } = useParams();
   const [productDetail, setProductDetail] = useState({});
+  const [quantity, setQuantity] = useState(1)
+
+
+  const handleIncrement = () => {
+    if (quantity < 20) {
+      setQuantity(prevCount => prevCount + 1)
+    }
+  }
+
+  const handleDecrement = () => {
+    if (quantity > 1) {
+      setQuantity(prevCount => prevCount - 1)
+    }
+  }
+
   useEffect(() => {
     fetch(`http://localhost:4000/homeProducts/${id}`)
       .then((res) => res.json())
@@ -14,7 +29,7 @@ const ProductDetails = () => {
   }, [id]);
   return (
     <div>
-      <NavBar/>
+      <NavBar />
       <div className="container-fluid row mt-5 pt-5">
         <div className="col-lg-4 col-sm-12 ">
           <img
@@ -34,13 +49,22 @@ const ProductDetails = () => {
           <hr />
           <p>{productDetail.detailS}</p>
           <div className="d-flex full-width">
-            <div>
+            <div className="mt-2">
               <div className="d-flex">
+                <button
+                  onClick={handleDecrement}
+                  type="button"
+                  className="btn btn-danger"
+                  data-id=""
+                  data-qty="0"
+                >
+                  <span className="fa fa-minus"></span>
+                </button>
                 <input
                   style={{ width: "50px", textAlign: "center" }}
                   type="text"
                   className="js-qty__num"
-                  value="1"
+                  value={quantity}
                   min="1"
                   data-id=""
                   aria-label="quantity"
@@ -48,24 +72,20 @@ const ProductDetails = () => {
                   name="quantity"
                   id="Quantity"
                 />
+
                 <div>
+
                   <button
+                    onClick={handleIncrement}
                     type="button"
-                    className="btn6"
+                    className="btn btn-success"
                     data-id=""
                     data-qty="11"
                   >
                     <span className="fa fa-plus"></span>
                   </button>
-                  <br />
-                  <button
-                    type="button"
-                    className="btn6"
-                    data-id=""
-                    data-qty="0"
-                  >
-                    <span className="fa fa-minus"></span>
-                  </button>
+
+
                 </div>
               </div>
             </div>
@@ -154,7 +174,7 @@ const ProductDetails = () => {
           </Col>
         </Row>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 };
