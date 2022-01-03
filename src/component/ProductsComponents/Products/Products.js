@@ -4,13 +4,13 @@ import Product from "../Product/Product";
 const Products = () => {
   const [homeProducts, setHomeProducts] = useState([]);
   useEffect(() => {
-    const url = `http://localhost:4000/homeProducts`;
+    const url = `https://mighty-reef-87460.herokuapp.com/homeProducts`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setHomeProducts(data));
   }, []);
   return (
-    <div className=" container">
+    <div className="container">
       <h2>All Products</h2>
       <Row lg={4}>
         {homeProducts.map((homeProduct) => (

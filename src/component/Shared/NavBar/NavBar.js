@@ -39,9 +39,9 @@ const NavBar = () => {
                   textDecoration: "none",
                   margin: "10px",
                 }}
-                to="/shop"
+                to="/about"
               >
-                Men
+                About Us
               </NavLink>
               <NavLink
                 style={{
@@ -49,9 +49,9 @@ const NavBar = () => {
                   textDecoration: "none",
                   margin: "10px",
                 }}
-                to="/features"
+                to="/portfolio"
               >
-                Women
+                Portfolio
               </NavLink>
               <NavLink
                 style={{
@@ -59,8 +59,9 @@ const NavBar = () => {
                   textDecoration: "none",
                   margin: "10px",
                 }}
-                to="/shop"
+                to="/"
               >
+
                 Shop
               </NavLink>
               <NavDropdown title="Pages" id="basic-nav-dropdown">

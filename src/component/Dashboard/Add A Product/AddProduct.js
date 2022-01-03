@@ -1,13 +1,10 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
 import './AddProduct.css';
-
 const AddProduct = () => {
    const { register, handleSubmit, reset } = useForm();
-
-
    const onSubmit = data => {
-      fetch('https://mighty-reef-87460.herokuapp.com/addProduct', {
+      fetch('https://mighty-reef-87460.herokuapp.com/addToProduct', {
          method: "POST",
          headers: {
             "content-type": "application/json"
@@ -19,13 +16,11 @@ const AddProduct = () => {
             if (result.acknowledged) {
                alert("The product is successfully added!!")
                reset()
+
             }
          })
 
    };
-
-
-
    return (
       <div>
 
@@ -38,7 +33,6 @@ const AddProduct = () => {
             <input required Placeholder="Image url/link" type="text" {...register("img",)} />
             <input required Placeholder="Color" type="text" {...register("color",)} />
             <input required Placeholder="Reviews" type="number" {...register("review",)} />
-
             <textarea
                {...register("detailS", { required: true })}
                placeholder="Details" />

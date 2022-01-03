@@ -1,0 +1,10 @@
+.dash_bg{
+    background-image: url('https://i.ibb.co/4pttmfR/photo-1562280963-8a5475740a10.jpg');
+    background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  color: white;
+  background-blend-mode: overlay;
+  background-color: rgba(29, 14, 14, 0.342) !important;
+}

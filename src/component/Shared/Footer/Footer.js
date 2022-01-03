@@ -17,7 +17,7 @@ const Footer = () => {
                             {/* <!-- Grid column --> */}
                             <div className="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
                                 <h6 className="text-uppercase mb-4 font-weight-bold">
-                                    Company name
+                                    <img src="https://lusion.arrowtheme.com/wp-content/uploads/2020/04/logo-default-89x30.png.webp" alt="" />
                                 </h6>
                                 <p>
                                     Here you can use rows and columns to organize your footer
@@ -31,19 +31,19 @@ const Footer = () => {
 
                             {/* <!-- Grid column --> */}
                             <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                                <h6 className="text-uppercase mb-4 font-weight-bold">Products</h6>
+                                <h6 className="text-uppercase mb-4 font-weight-bold">Support</h6>
                                 <p>
-                                    <a href="http://" className="text-white">MDBootstrap</a>
+                                    <a href="http://" className="text-white">Help</a>
 
                                 </p>
                                 <p>
-                                    <a href="http://" className="text-white">MDWordPress</a>
+                                    <a href="http://" className="text-white">Contact Us</a>
                                 </p>
                                 <p>
-                                    <a href="http://" className="text-white">BrandFlow</a>
+                                    <a href="http://" className="text-white">Feedback</a>
                                 </p>
                                 <p>
-                                    <a href="http://" className="text-white">Bootstrap Angular</a>
+                                    <a href="http://" className="text-white">Unsubscribe</a>
                                 </p>
                             </div>
                             {/* <!-- Grid column --> */}
@@ -53,19 +53,19 @@ const Footer = () => {
                             {/* <!-- Grid column --> */}
                             <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
                                 <h6 className="text-uppercase mb-4 font-weight-bold">
-                                    Useful links
+                                    Policies
                                 </h6>
                                 <p>
-                                    <a href="http://" className="text-white">Your Account</a>
+                                    <a href="http://" className="text-white">Privacy Policy</a>
                                 </p>
                                 <p>
-                                    <a href="http://" className="text-white">Become an Affiliate</a>
+                                    <a href="http://" className="text-white">Terms of use</a>
                                 </p>
                                 <p>
                                     <a href="http://" className="text-white">Shipping Rates</a>
                                 </p>
                                 <p>
-                                    <a href="http://" className="text-white">Help</a>
+                                    <a href="http://" className="text-white">Gift card conditions</a>
                                 </p>
                             </div>
 
@@ -95,9 +95,9 @@ const Footer = () => {
                             <div className="col-md-7 col-lg-8 text-center text-md-start">
                                 {/* <!-- Copyright --> */}
                                 <div className="p-3">
-                                    © 2020 Copyright:
+                                    © 2022 Copyright:
                                     <a className="text-white" href="https://mdbootstrap.com/"
-                                    >MDBootstrap.com</a
+                                    >lusion.com</a
                                     >
                                 </div>
                                 {/* <!-- Copyright --> */}
