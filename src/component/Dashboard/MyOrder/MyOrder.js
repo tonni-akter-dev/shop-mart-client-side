@@ -16,16 +16,16 @@ const MyOrder = () => {
   const [products, setProducts] = useState([]);
   const [open, setOpen] = React.useState(false);
   useEffect(() => {
-    fetch(`http://localhost:4000/myOrder/${user?.email}`)
+    fetch(`https://mighty-reef-87460.herokuapp.com/myOrder/${user?.email}`)
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, [user?.email]);
 
   const handleMyOrderDelete = (id) => {
     window.confirm("Are you sure you wish to delete this item?") &&
-      axios.delete(`http://localhost:4000/myOrderDelete/${id}`).then((res) => {
+      axios.delete(`https://mighty-reef-87460.herokuapp.com/myOrderDelete/${id}`).then((res) => {
         res.data.deletedCount &&
-          fetch(`http://localhost:4000/myOrder/${user?.email}`)
+          fetch(`https://mighty-reef-87460.herokuapp.com/myOrder/${user?.email}`)
             .then((res) => res.json())
             .then((data) => setProducts(data));
         setOpen(true);

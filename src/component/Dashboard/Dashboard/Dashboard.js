@@ -63,38 +63,47 @@ const Dashboard = () => {
         <div className="offcanvas-body ">
           <Nav className="justify-content-start flex-grow-1 pe-3 my-dashboard">
             <ul className="p-0">
-              <li>
-                <i className="fas fa-home"></i> <Link to="/home"> Home</Link>
-              </li>
-              <li>
-                <i className="fas fa-align-justify"></i>{" "}
-                <Link to="/dashboard/myOrders">MyOrders</Link>
-              </li>
-              <li>
-                <i className="fas fa-pen-square"></i>{" "}
-                <Link to="/dashboard/addReview">Add a Review</Link>
-              </li>
-              <li>
-                <i className="far fa-credit-card"></i>
-                <Link to="/dashboard/payment">Payment</Link>
-              </li>
-
-              <li>
-                <i className="fas fa-align-justify"></i>{" "}
-                <Link to="/dashboard/manageAllOrders">ManageAllOrders</Link>
-              </li>
-              <li>
-                <i className="fas fa-plus-circle"></i>{" "}
-                <Link to="/dashboard/addProduct">Add A Product</Link>
-              </li>
-              <li>
-                <i className="fas fa-user-shield"></i>{" "}
-                <Link to="/dashboard/makeAdmin">Make admin</Link>
-              </li>
-              <li>
-                <i className="fas fa-luggage-cart"></i>{" "}
-                <Link to="/dashboard/manageProducts">ManageProducts</Link>
-              </li>
+            <li>
+                    <i className="fas fa-home"></i>{" "}
+                    <Link to="/home"> Home</Link>
+                  </li>
+              {!admin &&
+                <div>
+                  
+                  <li>
+                    <i className="fas fa-align-justify"></i>{" "}
+                    <Link to="/dashboard/myOrders">MyOrders</Link>
+                  </li>
+                  <li>
+                    <i className="fas fa-pen-square"></i>{" "}
+                    <Link to="/dashboard/addReview">Add a Review</Link>
+                  </li>
+                  <li>
+                    <i className="far fa-credit-card"></i>
+                    <Link to="/dashboard/payment">Payment</Link>
+                  </li>
+                </div>
+              }
+              {admin && (
+                <div>
+                  <li>
+                    <i className="fas fa-align-justify"></i>{" "}
+                    <Link to="/dashboard/manageAllOrders">ManageAllOrders</Link>
+                  </li>
+                  <li>
+                    <i className="fas fa-plus-circle"></i>{" "}
+                    <Link to="/dashboard/addProduct">Add A Product</Link>
+                  </li>
+                  <li>
+                    <i className="fas fa-user-shield"></i>{" "}
+                    <Link to="/dashboard/makeAdmin">Make admin</Link>
+                  </li>
+                  <li>
+                    <i className="fas fa-luggage-cart"></i>{" "}
+                    <Link to="/dashboard/manageProducts">ManageProducts</Link>
+                  </li>
+                </div>
+              )}
             </ul>
             <button
               onClick={() => logout(navigation, location)}

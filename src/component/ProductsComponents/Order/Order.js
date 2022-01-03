@@ -9,7 +9,7 @@ const Order = () => {
   const { user } = useAuth();
   const [productDetail, setProductDetail] = useState({});
   useEffect(() => {
-    fetch(`http://localhost:4000/homeProducts/${id}`)
+    fetch(`https://mighty-reef-87460.herokuapp.com/homeProducts/${id}`)
       .then((res) => res.json())
       .then((data) => setProductDetail(data));
   }, [id]);
@@ -18,7 +18,7 @@ const Order = () => {
   const { register, handleSubmit, reset, setValue } = useForm();
   const onSubmit = (data) => {
     console.log(data);
-    fetch("http://localhost:4000/addToCartProduct", {
+    fetch("https://mighty-reef-87460.herokuapp.com/addToCartProduct", {
       method: "post",
       headers: {
         "content-type": "application/json",

@@ -7,7 +7,7 @@ import ManageProduct from "../ManageProduct/ManageProduct";
 const ManageProducts = () => {
   const [allProducts, setAllProducts] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:4000/allproducts")
+    fetch("https://mighty-reef-87460.herokuapp.com/allproducts")
       .then((res) => res.json())
       .then((data) => setAllProducts(data));
   }, []);
@@ -24,7 +24,7 @@ const ManageProducts = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         axios
-          .delete(`http://localhost:4000/productDelete/${id}`)
+          .delete(`https://mighty-reef-87460.herokuapp.com/productDelete/${id}`)
           .then((res) => {
             const remaining = allProducts.filter((order) => order._id !== id);
             setAllProducts(remaining);

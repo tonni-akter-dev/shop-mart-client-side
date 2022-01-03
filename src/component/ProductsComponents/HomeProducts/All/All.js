@@ -3,7 +3,7 @@ import Clothes from "../Clothes/Clothes";
 const All = () => {
   const [homeProducts, setHomeProducts] = useState([]);
   useEffect(() => {
-    const url = `http://localhost:4000/homeproducts/all`;
+    const url = `https://mighty-reef-87460.herokuapp.com/homeproducts/all`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setHomeProducts(data));

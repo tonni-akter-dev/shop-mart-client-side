@@ -5,22 +5,25 @@ import { Link } from "react-router-dom";
 const Product = (props) => {
   const { img, title, price, _id } = props.homeProduct;
   return (
-    <div className=" mt-5">
+    <div className="mt-5">
       <div>
         <Col sm={12}>
           <Card style={{ height: "380px" }}>
             <Card.Img variant="top" style={{ height: "250px" }} src={img} />
             <Card.Body>
-              <Card.Title>            
-                <Link  style={{
-                      textDecoration:"none"
-                    }} to={`/homeProducts/${_id}`}>
+              <Card.Title>
+                <Link
+                  style={{
+                    textDecoration: "none",
+                  }}
+                  to={`/homeProducts/${_id}`}
+                >
                   <span
                     style={{
                       fontSize: "18px",
                       color: "brown",
                       fontWeight: "bold ",
-                      textDecoration:"none"
+                      textDecoration: "none",
                     }}
                   >
                     {title}
@@ -29,24 +32,23 @@ const Product = (props) => {
               </Card.Title>
               <Card.Title className="d-flex justify-content-between">
                 <span style={{ fontSize: "18px" }}>${price}.00</span>
-                <span style={{ fontSize: "18px" }}>
-                  <Link  style={{
-                      fontSize: "18px",
-                      color: "black",
-                      fontWeight: "bold ",
-                      textDecoration:"none"
-                    }} to="/">Add to cart </Link>
-                </span>
               </Card.Title>
               <Card.Title className="d-flex justify-content-between">
-                <span style={{ fontSize: "18px" }}><Link to={`/homeProducts/${_id}`}>Details</Link></span>
                 <span style={{ fontSize: "18px" }}>
-                  <Link  style={{
+                  <Link to={`/homeProducts/${_id}`}>Details</Link>
+                </span>
+                <span style={{ fontSize: "18px" }}>
+                  <Link
+                    style={{
                       fontSize: "18px",
                       color: "black",
                       fontWeight: "bold ",
-                      textDecoration:"none"
-                    }} to={`/order/${_id}`}>Order Now </Link>
+                      textDecoration: "none",
+                    }}
+                    to={`/order/${_id}`}
+                  >
+                    Order Now{" "}
+                  </Link>
                 </span>
               </Card.Title>
             </Card.Body>
