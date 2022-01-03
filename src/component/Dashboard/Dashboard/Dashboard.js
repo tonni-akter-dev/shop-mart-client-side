@@ -6,7 +6,7 @@ const Dashboard = () => {
 
    // const { logOut, admin, user } = useAuth()
 
-   const history = useNavigate()
+   // const history = useNavigate()
    const uri = "/home"
 
    return (
