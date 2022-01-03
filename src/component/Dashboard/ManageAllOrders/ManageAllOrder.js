@@ -4,15 +4,12 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import { Button, TableRow, TableCell } from '@mui/material';
-
-
 const ManageALlOrder = (props) => {
     const { title, price, date, email, name, status, statusColor, _id } = props?.product;
     const { handleSetStatus } = props;
     const handleChange = (event) => {
         const status = event.target.value;
         handleSetStatus(status, _id)
-
     }
 
     return (
