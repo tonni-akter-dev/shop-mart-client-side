@@ -19,7 +19,6 @@ import ProductDetails from "./component/ProductDetails/ProductDetails";
 import Blogs from "./component/Routes/Blogs/Blogs/Blogs";
 import Order from "./component/ProductsComponents/Order/Order";
 import Shops from "./component/Routes/ShopRoutes/Shops/Shops";
-
 function App() {
   return (
     <div className="App">
@@ -27,7 +26,7 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/homeProducts/:id" element={<ProductDetails />} />
-           
+
             <Route path="/order/:id" element={<Order />} />
 
             <Route path="/" element={<Home />} />
