@@ -2,21 +2,24 @@ import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import "./ProductDetails.css";
 import { Col, Row } from "react-bootstrap";
+import NavBar from "../Shared/NavBar/NavBar";
+import Footer from "../Shared/Footer/Footer";
 const ProductDetails = () => {
   let { id } = useParams();
   const [productDetail, setProductDetail] = useState({});
   useEffect(() => {
-    fetch(`http://localhost:4000/homeAll/${id}`)
+    fetch(`http://localhost:4000/homeProducts/${id}`)
       .then((res) => res.json())
       .then((data) => setProductDetail(data));
   }, [id]);
   return (
     <div>
+      <NavBar/>
       <div className="container-fluid row mt-5 pt-5">
         <div className="col-lg-4 col-sm-12 ">
           <img
             className="mb-4 centering img-fluid"
-            src={productDetail.img}
+            src={productDetail?.img}
             style={{ width: "400px", height: "550px" }}
             alt=""
           />
@@ -29,18 +32,7 @@ const ProductDetails = () => {
           <br />
           <span>No reviews</span>
           <hr />
-          {productDetail.details ? (
-            <p className="details">{productDetail.details}</p>
-          ) : (
-            <p className="details">
-              Calf-length dress in airy, textured cotton fabric with a printed
-              pattern Sed hendrerit. Cras risus ipsum, faucibus ut, ullamcorper
-              id, varius estibulum ante ipsum primis in faucibus Product Details
-              Inspired by traditional blockprinting techniques in India, our own
-              in-house design is the vibrant pattern that every closet needs.
-              That's why...
-            </p>
-          )}
+          <p>{productDetail.detailS}</p>
           <div className="d-flex full-width">
             <div>
               <div className="d-flex">
@@ -162,26 +154,7 @@ const ProductDetails = () => {
           </Col>
         </Row>
       </div>
-      {/* details */}
-      <div className="text-center">
-        <p className="details" style={{ fontWeight: "bold" }}>
-          PRODUCT DETAILS
-        </p>
-        <span className="details1">
-          Inspired by traditional blockprinting techniques in India, our own
-          in-house design is the vibrant pattern that every closet needs. That's
-          why we crafted our party standout tiered maxi dress in this royal
-          blue-and-yellow print: It's lightweight, lined and will look great at
-          all your most festive summer events.
-        </span>{" "}
-        <br />
-        <img
-          src="https://i.ibb.co/fqDrrQr/description3.jpg"
-          className="img-fluid mt-4 mb-4"
-          alt=""
-        />
-        <hr />
-      </div>
+      <Footer/>
     </div>
   );
 };

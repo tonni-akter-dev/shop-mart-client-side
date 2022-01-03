@@ -15,19 +15,17 @@ import Contact from "./component/pages/Contact/Contact";
 import NotFound from "./component/pages/NotFound/NotFound";
 import Portfolio from "./component/pages/Portfolio/Portfolio";
 import Register from "./component/Register/Register";
-import ProductDetails from './component/ProductDetails/ProductDetails';
+import ProductDetails from "./component/ProductDetails/ProductDetails";
+import Blogs from "./component/Routes/Blogs/Blogs/Blogs";
+import Order from "./component/ProductsComponents/Order/Order";
 function App() {
   return (
     <div className="App">
       <AuthProvider>
         <BrowserRouter>
           <Routes>
-          <Route
-              path="/homeProducts/:id"
-              element={
-                  <ProductDetails />
-              }
-            />
+            <Route path="/homeProducts/:id" element={<ProductDetails />} />
+            <Route path="/order/:id" element={<Order />} />
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
             <Route path="/register" element={<Register />} />
@@ -35,6 +33,7 @@ function App() {
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/error" element={<NotFound />} />
+            <Route path="/blog" element={<Blogs />} />
             <Route path="/dashboard" element={<Dashboard />}>
               <Route
                 path={`/dashboard/myOrders`}

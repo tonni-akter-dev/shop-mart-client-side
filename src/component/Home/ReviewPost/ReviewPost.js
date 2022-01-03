@@ -31,7 +31,7 @@ const ReviewPost = (props) => {
     const [reviews, setReviews] = useState([]) || '';
 
     useEffect(() => {
-        fetch('http://localhost:4000/review')
+        fetch('https://mighty-reef-87460.herokuapp.com/review')
             .then(res => res.json())
             .then(data => setReviews(data))
     }, [setReviews])
