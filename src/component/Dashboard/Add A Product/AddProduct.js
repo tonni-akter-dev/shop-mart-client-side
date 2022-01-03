@@ -7,7 +7,7 @@ const AddProduct = () => {
 
 
    const onSubmit = data => {
-      fetch('http://localhost:4000/addProduct', {
+      fetch('https://mighty-reef-87460.herokuapp.com/addProduct', {
          method: "POST",
          headers: {
             "content-type": "application/json"

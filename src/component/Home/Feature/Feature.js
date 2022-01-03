@@ -14,21 +14,19 @@ const Feature = () => {
     { img: Img_3 },
     { img: Img_4 },
     { img: Img_5 },
-    { img: Img_6 }
-
-  ]
+    { img: Img_6 },
+  ];
   return (
-    <div className='container'>
-      <div className='row py-3'>
-        {
-          feature.map((f, index) =>
-            <img
-              key={index}
-              className='featureImg col-lg-2 img-fluid m-0 p-0'
-              src={f.img} alt="" />
-          )
-        }
-
+    <div className="container">
+      <div className="row py-3">
+        {feature.map((f, index) => (
+          <img
+            key={index}
+            className="featureImg col-lg-2 img-fluid m-0 p-0"
+            src={f.img}
+            alt=""
+          />
+        ))}
       </div>
     </div>
   );

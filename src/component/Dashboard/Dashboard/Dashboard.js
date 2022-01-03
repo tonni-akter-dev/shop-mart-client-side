@@ -1,5 +1,5 @@
 import { Nav, Navbar } from "react-bootstrap";
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useNavigate } from "react-router-dom";
 import "./Dashboard.css";
 
 const Dashboard = () => {

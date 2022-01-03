@@ -15,16 +15,20 @@ import Contact from "./component/pages/Contact/Contact";
 import NotFound from "./component/pages/NotFound/NotFound";
 import Portfolio from "./component/pages/Portfolio/Portfolio";
 import Register from "./component/Register/Register";
-import All from "./component/ProductsComponents/HomeProducts/All/All";
-import Clothes from "./component/ProductsComponents/HomeProducts/Clothes/Clothes";
-import Shoes from "./component/ProductsComponents/HomeProducts/Shoes/Shoes";
-import Bags from "./component/ProductsComponents/HomeProducts/Bags/Bags";
+import ProductDetails from './component/ProductDetails/ProductDetails';
+import Blogs from "./component/Routes/Blogs/Blogs/Blogs";
 function App() {
   return (
     <div className="App">
       <AuthProvider>
         <BrowserRouter>
           <Routes>
+          <Route
+              path="/homeProducts/:id"
+              element={
+                  <ProductDetails />
+              }
+            />
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
             <Route path="/register" element={<Register />} />
@@ -32,18 +36,7 @@ function App() {
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/error" element={<NotFound />} />
-
-            {/* homeproducts nested routes */}
-            <Route path="/homeproducts" element={<Home />}>
-              <Route path={`/homeproducts/all`} element={<All />} />
-              <Route
-                path={`/homeproducts/clothes`}
-                element={<Clothes></Clothes>}
-              />
-              <Route path={`/homeproducts/shoes`} element={<Shoes></Shoes>} />
-              <Route path={`/homeproducts/bags`} element={<Bags></Bags>} />
-            </Route>
-
+            <Route path="/blog" element={<Blogs />} />
             <Route path="/dashboard" element={<Dashboard />}>
               <Route
                 path={`/dashboard/myOrders`}

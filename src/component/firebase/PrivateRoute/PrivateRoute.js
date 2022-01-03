@@ -1,11 +1,10 @@
 import React from "react";
 import { Spinner } from "react-bootstrap";
 import { Navigate, useLocation } from "react-router";
-import useAuth from "./../hook/useAuth";
+import useAuth from "../../hook/useAuth";
 const PrivateRoute = ({ children, ...rest }) => {
   let { user, isLoading } = useAuth();
   let location = useLocation();
-
   if (isLoading) {
     return (
       <Spinner animation="border" role="status">
