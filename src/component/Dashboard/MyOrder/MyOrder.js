@@ -21,6 +21,7 @@ const MyOrder = () => {
          .then(data => setProducts(data))
    }, [user?.email])
 
+   console.log(products)
    const handleMyOrderDelete = (id) => {
       window.confirm("Are you sure you wish to delete this item?") &&
          axios.delete(`http://localhost:4000/myOrderDelete/${id}`)
@@ -30,7 +31,6 @@ const MyOrder = () => {
                   fetch(`http://localhost:4000/myOrder/${user?.email}`)
                      .then(res => res.json())
                      .then(data => setProducts(data))
-
                setOpen(true)
             }
 
@@ -74,7 +74,7 @@ const MyOrder = () => {
                      </Box>
                      <div className="card-body">
                         <h5 className="card-title">{product?.title}</h5>
-                        <p className="card-text">{product?.detailS}</p>
+                        <p className="card-text">{product?.detailS.slice(0, 100)}</p>
                         <typography>
                            ${product?.price}
                         </typography>

@@ -11,7 +11,7 @@ const ManageALlOrder = (props) => {
         const status = event.target.value;
         handleSetStatus(status, _id)
     }
-
+    console.log(statusColor)
     return (
         <TableRow
             sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
@@ -28,7 +28,7 @@ const ManageALlOrder = (props) => {
                     <InputLabel id="demo-simple-select-autowidth-label">Action</InputLabel>
 
                     <Select
-                        sx={{ statusColor: { statusColor: statusColor } }}
+                        sx={{ backgroundColor: `${statusColor}` }}
                         labelId="demo-simple-select-autowidth-label"
                         id="demo-simple-select-autowidth"
                         value={status}
