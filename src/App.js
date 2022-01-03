@@ -35,7 +35,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/error" element={<NotFound />} />
+            <Route path="*" element={<NotFound />} />
             <Route path="/blog" element={<Blogs />} />
             {/* /shop */}
             <Route path="/shop" element={<Shops />} />
@@ -61,7 +61,6 @@ function App() {
                 path={`/dashboard/addProduct`}
                 element={<AddProduct></AddProduct>}
               />
-
               <Route
                 path={`/dashboard/makeAdmin`}
                 element={<MakeAdmin></MakeAdmin>}

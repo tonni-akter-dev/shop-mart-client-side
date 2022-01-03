@@ -1,11 +1,57 @@
-import React from 'react';
-
+import React, { useEffect, useState } from "react";
+import { Row } from "react-bootstrap";
+import axios from "axios";
+import Swal from "sweetalert2";
+import ManageProduct from "../ManageProduct/ManageProduct";
+// import NavBar from "../../../Shared/NavBar/NavBar";
 const ManageProducts = () => {
-   return (
-      <div>
-         <h2>Manage all orders</h2>
+  const [allProducts, setAllProducts] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:4000/allproducts")
+      .then((res) => res.json())
+      .then((data) => setAllProducts(data));
+  }, []);
+  // handle delete btn
+  const handleDeletBtn = (id) => {
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        axios
+          .delete(`http://localhost:4000/productDelete/${id}`)
+          .then((res) => {
+            const remaining = allProducts.filter((order) => order._id !== id);
+            setAllProducts(remaining);
+          });
+        Swal.fire("Deleted!", "Your file has been deleted.", "success");
+      }
+    });
+  };
+  return (
+    <div>
+      {/* <NavBar /> */}
+      <h3 style={{ borderBottom: "3px solid skyblue", width: "40%" }}>
+        All Products
+      </h3>
+      <div className="container-fluid">
+        <Row lg="4">
+          {allProducts.map((allProduct) => (
+            <ManageProduct
+              key={allProduct._id}
+              allProduct={allProduct}
+              handleDeletBtn={handleDeletBtn}
+            ></ManageProduct>
+          ))}
+        </Row>
       </div>
-   );
+    </div>
+  );
 };
 
 export default ManageProducts;
