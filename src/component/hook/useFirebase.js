@@ -1,15 +1,9 @@
-import init from "./../firebase/firebase.init";
 import {
-  getAuth,
-  signInWithPopup,
-  GoogleAuthProvider,
-  createUserWithEmailAndPassword,
-  signOut,
-  onAuthStateChanged,
-  signInWithEmailAndPassword,
-  updateProfile,
+  createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, onAuthStateChanged,
+  signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile
 } from "firebase/auth";
 import { useEffect, useState } from "react";
+import init from "./../firebase/firebase.init";
 init();
 const useFirebase = () => {
   const [user, setUser] = useState({});
@@ -45,8 +39,8 @@ const useFirebase = () => {
         updateProfile(auth.currentUser, {
           displayName: name,
         })
-          .then(() => {})
-          .catch((error) => {});
+          .then(() => { })
+          .catch((error) => { });
         navigate("/");
       })
       .catch((error) => {
@@ -67,12 +61,13 @@ const useFirebase = () => {
     return () => unsubscribe;
   }, [auth]);
 
-  const logout = () => {
+  const logout = (navigate, location) => {
     setIsLoading(true);
     signOut(auth)
       .then(() => {
         setError("");
         setUser({});
+        navigate(location?.state?.from || '/')
       })
       .catch((error) => {
         setError(error.message);
