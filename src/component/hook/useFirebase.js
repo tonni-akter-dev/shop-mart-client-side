@@ -22,6 +22,7 @@ const useFirebase = () => {
       .then((result) => {
         /*  const destination = location?.state?.from || '/';
          history.replace(destination) */
+        history(location?.state?.from || '/')
         const user = result.user;
         // save user to database--
         saveUsers(user.email, user.displayName, 'PUT')
@@ -63,6 +64,7 @@ const useFirebase = () => {
 
         /*  const destination = location?.state?.from || '/';
          history.replace(destination) */
+        history(location?.state?.from || '/')
         setAuthError('')
       })
       .catch((error) => {
@@ -84,6 +86,7 @@ const useFirebase = () => {
       .then((userCredential) => {
         /* const destination = location?.state?.from || '/';
         history.push(destination) */
+        history(location?.state?.from || '/')
         setAuthError('')
 
       })
