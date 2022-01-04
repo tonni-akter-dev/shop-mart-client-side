@@ -8,10 +8,10 @@ const Product = (props) => {
     <div className="mt-5">
       <div>
         <Col sm={12}>
-          <Card style={{ height: "380px" }}>
+          <Card data-aos="zoom-in" style={{ height: "380px" }}>
             <Card.Img variant="top" style={{ height: "250px" }} src={img} />
             <Card.Body>
-              <Card.Title>
+              <Card.Title data-aos="fade-left">
                 <Link
                   style={{
                     textDecoration: "none",
@@ -33,7 +33,7 @@ const Product = (props) => {
               <Card.Title className="d-flex justify-content-between">
                 <span style={{ fontSize: "18px" }}>${price}.00</span>
               </Card.Title>
-              <Card.Title className="d-flex justify-content-between">
+              <Card.Title data-aos="fade-right" className="d-flex justify-content-between">
                 <span style={{ fontSize: "18px" }}>
                   <Link to={`/homeProducts/${_id}`}>Details</Link>
                 </span>
