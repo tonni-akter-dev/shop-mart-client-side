@@ -39,6 +39,7 @@ const Banner = () => {
                 />
               </div>
               <div
+                data-aos="flip-left"
                 className="col-lg-6"
                 style={{
                   margin: "auto",
@@ -62,7 +63,7 @@ const Banner = () => {
                 <h1>New Arrival Collection</h1>
                 <button className="btn btn-dark">Explore Now</button>
               </div>
-              <div className="col-lg-6">
+              <div data-aos="fade-left" className="col-lg-6">
                 <img
                   src="https://i.ibb.co/nkpwTKx/Slider3-1512x.jpg"
                   className="d-block w-100"

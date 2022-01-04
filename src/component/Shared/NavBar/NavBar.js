@@ -1,13 +1,13 @@
 
 
+import { Button } from "@mui/material";
 import React from "react";
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
-import "./NavBar.css";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import ChatIcon from '@material-ui/icons/Chat';
 import useAuth from "../../hook/useAuth";
 import "./NavBar.css";
-import { Button } from "@mui/material";
+
 
 const NavBar = () => {
   const { user, logOut } = useAuth();

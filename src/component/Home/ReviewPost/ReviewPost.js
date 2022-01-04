@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import { Paper, Typography } from '@mui/material';
+import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Rating from '@mui/material/Rating';
-import Box from '@mui/material/Box';
-import { Paper, Typography } from '@mui/material';
-import './ReviewPostStyle.css'
+import React, { useEffect, useState } from 'react';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import './ReviewPostStyle.css';
 
 
 const responsive = {
@@ -72,7 +72,7 @@ const ReviewPost = (props) => {
                             reviews.map(review =>
 
 
-                                <Box className='m-2' key={review._id}>
+                                <Box data-aos="zoom-out" className='m-2' key={review._id}>
                                     <Paper className=''>
                                         <Box className="d-flex">
                                             <Box className=" ">
