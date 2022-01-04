@@ -20,6 +20,7 @@ import Order from "./component/ProductsComponents/Order/Order";
 import Shops from "./component/Routes/ShopRoutes/Shops/Shops";
 import DashboardPort from './component/Dashboard/DashboardPort/DashboardPort';
 import LoginToggle from "./component/Register/Login/Login/LoginToggle/LoginToggle";
+import Chat from "./component/pages/Chat/Chat";
 function App() {
   return (
     <div className="App">
@@ -37,6 +38,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
             <Route path="/blog" element={<Blogs />} />
+            <Route path="/chat" element={<Chat />} />
             <Route path="/Login" element={<LoginToggle />} />
             {/* /shop */}
             <Route path="/shop" element={<Shops />} />

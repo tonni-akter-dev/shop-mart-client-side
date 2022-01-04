@@ -4,7 +4,7 @@ import React from "react";
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import "./NavBar.css";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
-
+import ChatIcon from '@material-ui/icons/Chat';
 import useAuth from "../../hook/useAuth";
 import "./NavBar.css";
 import { Button } from "@mui/material";
@@ -155,15 +155,16 @@ const NavBar = () => {
                 style={{ color: "black", marginRight: "20px" }}
                 to="/"
               >
-                <i className="far fa-heart"></i>
+                <i className="fab fa-opencart"></i>
               </NavLink>
+
 
               <NavLink
                 className="mt-2"
                 style={{ color: "black", marginRight: "20px" }}
-                to="/"
+                to="/chat"
               >
-                <i className="fab fa-opencart"></i>
+                <Button size="small"><ChatIcon /></Button>
               </NavLink>
 
 
