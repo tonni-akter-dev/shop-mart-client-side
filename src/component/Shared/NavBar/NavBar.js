@@ -44,16 +44,7 @@ const NavBar = () => {
               >
                 <Button sx={{ color: 'black' }}>About Us</Button>
               </NavLink>
-              <NavLink
-                style={{
-                  color: "black",
-                  textDecoration: "none",
-                  margin: "10px",
-                }}
-                to="/portfolio"
-              >
-                <Button sx={{ color: 'black' }}>Portfolio</Button>
-              </NavLink>
+
               <NavLink
                 style={{
                   color: "black",
