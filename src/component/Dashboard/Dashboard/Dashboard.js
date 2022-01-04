@@ -4,7 +4,7 @@ import useAuth from "../../hook/useAuth";
 import "./Dashboard.css";
 import userPhoto from "./img/userPhoto.png";
 const Dashboard = () => {
-  const { logout, admin, user } = useAuth();
+  const { logOut, admin, user } = useAuth();
   // const history = useNavigate()
   const uri = "/home";
   const navigation = useNavigate();
@@ -63,13 +63,13 @@ const Dashboard = () => {
         <div className="offcanvas-body ">
           <Nav className="justify-content-start flex-grow-1 pe-3 my-dashboard">
             <ul className="p-0">
-            <li>
-                    <i className="fas fa-home"></i>{" "}
-                    <Link to="/home"> Home</Link>
-                  </li>
+              <li>
+                <i className="fas fa-home"></i>{" "}
+                <Link to="/home"> Home</Link>
+              </li>
               {!admin &&
                 <div>
-                  
+
                   <li>
                     <i className="fas fa-align-justify"></i>{" "}
                     <Link to="/dashboard/myOrders">MyOrders</Link>
@@ -106,7 +106,7 @@ const Dashboard = () => {
               )}
             </ul>
             <button
-              onClick={() => logout(navigation, location)}
+              onClick={() => logOut(navigation, location)}
               className="btn my-button"
             >
               <i className="fas fa-sign-out-alt"></i> Sign out
