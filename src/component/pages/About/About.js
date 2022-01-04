@@ -74,60 +74,69 @@ const About = () => {
       {/* section3 */}
 
       <div className="container">
-
-        <h4 className=" text-center fw-bold text-danger py-5 text-decoration-underline ">◦•●❤♡ 𝕆𝕦𝕣 𝕥𝕖𝕒𝕞♡❤●•◦</h4>
+        <h4 className=" text-center fw-bold text-danger py-5 text-decoration-underline ">
+          ◦•●❤♡ 𝕆𝕦𝕣 𝕥𝕖𝕒𝕞♡❤●•◦
+        </h4>
         <div className="row g-4">
-          <div className="col-lg-3 col-md-6 col-sm-12">
+          <div className="col-lg-4 col-md-6 col-sm-12">
             <div className="card card3 profile-two">
               <div className="card-image profile-img--two">
-                <img className=""
+                <img
+                  className=""
                   src="https://scontent.fdac24-1.fna.fbcdn.net/v/t39.30808-6/245071675_1014347032470719_5653917000467582376_n.jpg?_nc_cat=100&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeG0e9gW59hKXHX8hCjudWzOJPR6kCKKjTAk9HqQIoqNMDUmUP6M1EVd_PvzDQd-B2JIrjjlPa4pI9-QgNTqwF08&_nc_ohc=4G43-T9W3PYAX9ZQo0Z&_nc_ht=scontent.fdac24-1.fna&oh=00_AT9x3IoS2xowvYjj9Cn7RXq6WWcMDePJH1VSwm5GP2NiNQ&oe=61D79726"
                   alt="profile two"
                 />
               </div>
               <ul className="social-icons">
                 <li>
-                  <a href="https://www.facebook.com/JsRukon" target='blank'>
+                  <a href="https://www.facebook.com/JsRukon" target="blank">
                     <i className="fab fa-facebook-f"></i>
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.linkedin.com/in/rukon-js/" target='blank'>
+                  <a
+                    href="https://www.linkedin.com/in/rukon-js/"
+                    target="blank"
+                  >
                     <i className="fab fa-instagram"></i>
                   </a>
                 </li>
                 <li>
-                  <a href="https://twitter.com/rukon_js" target='blank'>
+                  <a href="https://twitter.com/rukon_js" target="blank">
                     <i className="fab fa-twitter"></i>
                   </a>
                 </li>
                 <li>
-                  <a href="https://rukon-js.netlify.app/" target='blank'>
+                  <a href="https://rukon-js.netlify.app/" target="blank">
                     <i className="fab fa-dribbble"></i>
                   </a>
                 </li>
                 <li>
-                  <a href="https://github.com/RnRukon" target='blank'>
+                  <a href="https://github.com/RnRukon" target="blank">
                     <i className="fab fa-github"></i>
                   </a>
                 </li>
               </ul>
-              <div className="details jane">
-                <h2>Parks Missie </h2>
+              <div className="details jane text-center">
+                <h5>MD Rukon Uddin</h5>
               </div>
             </div>
           </div>
-          <div className="col-lg-3 col-md-6 col-sm-12">
+          <div className="col-lg-4 col-md-6 col-sm-12">
             <div className="card card3 profile-two">
               <div className="card-image profile-img--two">
-                <img className=""
+                <img
+                  className=""
                   src="https://scontent.fdac24-1.fna.fbcdn.net/v/t39.30808-6/259797078_606920690736093_9109459830613981002_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeHZ86-fOrwAZsr8scciP9hR_Zn-lDq3cnH9mf6UOrdycWVmmvj-PE9s3V6WiD8lzhR-mlm6J0yWeXojzeVLRBiQ&_nc_ohc=IyhY50Rg6noAX-ieOei&_nc_ht=scontent.fdac24-1.fna&oh=00_AT_9WWFwEmxtflpLUHf_iGdMlVr2C0QxCRhiOzmDpvS6YA&oe=61D888CA"
                   alt="profile two"
                 />
               </div>
               <ul className="social-icons">
                 <li>
-                  <a href="https://www.facebook.com/siddikaa.prodhan" target='blank'>
+                  <a
+                    href="https://www.facebook.com/siddikaa.prodhan"
+                    target="blank"
+                  >
                     <i className="fab fa-facebook-f"></i>
                   </a>
                 </li>
@@ -137,7 +146,6 @@ const About = () => {
                   </a>
                 </li>
                 <li>
-
                   <a href="/ target='blank'">
                     <i className="fab fa-twitter"></i>
                   </a>
@@ -148,82 +156,98 @@ const About = () => {
                   </a>
                 </li>
               </ul>
-              <div className="details jane">
-                <h2>Parks Missier </h2>
+              <div className="details jane text-center">
+                <h5>Tonni Akter</h5>
               </div>
             </div>
           </div>
-          <div className="col-lg-3 col-md-6 col-sm-12">
+
+          <div className="col-lg-4 col-md-6 col-sm-12">
             <div className="card card3 profile-two">
               <div className="card-image profile-img--two">
-                <img className=" img-fluid"
-                  src="https://i.ibb.co/s9B7Qmw/IMG-3500.jpg"
-                  alt="profile two"
-                />
-              </div>
-              <ul className="social-icons">
-                <li>
-                  <a href="https://www.facebook.com/m.mehediriad" target='blank'>
-                    <i className="fab fa-facebook-f"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://www.linkedin.com/in/mehediriad/" target='blank'>
-                    <i className="fab fa-linkedin"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://github.com/mehediriad" target='blank'>
-                    <i className="fab fa-github"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://mehedi-riad.web.app/" target='blank'>
-                    <i className="fab fa-dribbble"></i>
-                  </a>
-                </li>
-              </ul>
-              <div className="details jane">
-                <h2>Parks Missie </h2>
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-3 col-md-6 col-sm-12">
-            <div className="card card3 profile-two">
-              <div className="card-image profile-img--two">
-                <img className=" img-fluid"
+                <img
+                  className=" img-fluid"
                   src="https://scontent.fdac24-1.fna.fbcdn.net/v/t39.30808-6/241860524_2930063633923705_3131907625071003352_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=8bfeb9&_nc_eui2=AeHZoK6C4E8EFlqRTfPybk2-Ev0iUE3NI5gS_SJQTc0jmFcKdz3upHaBahZ8l7FC4RpvsguRwdjLReVAnA6LpUnR&_nc_ohc=8V8tq1-EJyYAX-33OCJ&tn=b2cWXy7_fXbduTma&_nc_ht=scontent.fdac24-1.fna&oh=00_AT-ESrwS-4H-oBOjKgc6L1n2tKlrg1GknKFQtwcN88yIdA&oe=61D7D6AA"
                   alt="profile two"
                 />
               </div>
               <ul className="social-icons">
                 <li>
-                  <a href="https://www.facebook.com/sharifulislam5619" target='blank'>
+                  <a
+                    href="https://www.facebook.com/sharifulislam5619"
+                    target="blank"
+                  >
                     <i className="fab fa-facebook-f"></i>
                   </a>
                 </li>
                 <li>
-                  <a href="/" target='blank'>
+                  <a href="/" target="blank">
                     <i className="fab fa-instagram"></i>
                   </a>
                 </li>
                 <li>
-                  <a href="/" target='blank'>
-                    <i className="fab fa-twitter" ></i>
+                  <a href="/" target="blank">
+                    <i className="fab fa-twitter"></i>
                   </a>
                 </li>
                 <li>
-                  <a href="/" target='blank'>
+                  <a href="/" target="blank">
                     <i className="fab fa-dribbble"></i>
                   </a>
                 </li>
               </ul>
-              <div className="details jane">
-                <h2>Parks Missie </h2>
+              <div className="details jane text-center">
+                <h5>Shariful Islam</h5>
+              </div>
+            </div>
+          </div>
+        
+        </div>
+        <div className="row container">
+        <div className="col-lg-3 col-md-6 col-sm-12 mt-5">
+            <div className="card card3 profile-two">
+              <div className="card-image profile-img--two">
+                <img
+                  className=" img-fluid"
+                  src="https://i.ibb.co/s9B7Qmw/IMG-3500.jpg"
+                  alt="profile two"
+                />
+              </div>
+              <ul className="social-icons">
+                <li>
+                  <a
+                    href="https://www.facebook.com/m.mehediriad"
+                    target="blank"
+                  >
+                    <i className="fab fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/mehediriad/"
+                    target="blank"
+                  >
+                    <i className="fab fa-linkedin"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://github.com/mehediriad" target="blank">
+                    <i className="fab fa-github"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://mehedi-riad.web.app/" target="blank">
+                    <i className="fab fa-dribbble"></i>
+                  </a>
+                </li>
+              </ul>
+              <div className="details jane text-center">
+                <h5>Mehedi Riad</h5>
               </div>
             </div>
           </div>
         </div>
+     
       </div>
       <Footer />
     </div>

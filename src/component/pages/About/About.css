@@ -1,9 +1,8 @@
 .card-wrapper {
-  width: 370px;
+  width: 320px;
   height: 500px;
   position: relative;
 }
-
 .card3 {
   position: absolute;
   top: 50%;
