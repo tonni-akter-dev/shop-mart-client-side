@@ -5,7 +5,7 @@ const Gallary1 = () => {
     <div>
       <section className="container mt-5">
         <div className="row">
-          <div className="col-lg-5 col-sm-12 card border-0 ">
+          <div data-aos="fade-right" className="col-lg-5 col-sm-12 card border-0 ">
             <div className="over">
               <img
                 className="sec51pic img-fluid"
@@ -17,7 +17,7 @@ const Gallary1 = () => {
               Women
             </button>
           </div>
-          <div className="col-lg-3 col-sm-12 card border-0 overflow-hidden ">
+          <div data-aos="zoom-in" className="col-lg-3 col-sm-12 card border-0 overflow-hidden ">
             <img
               className="mb-4 pic over img-fluid"
               src="https://i.ibb.co/tKb4wgV/2.jpg"
@@ -36,7 +36,7 @@ const Gallary1 = () => {
               Footwear
             </button>
           </div>
-          <div className="col-lg-4 col-sm-12 card border-0 overflow-hidden ">
+          <div data-aos="fade-left" className="col-lg-4 col-sm-12 card border-0 overflow-hidden ">
             <img
               className="pic img-fluid"
               style={{ height: "650px" }}
