@@ -31,7 +31,7 @@ function App() {
   }, [])
 
   return (
-    <div className="App">
+    <div style={{ overflow: 'hidden' }} className="App">
       <AuthProvider>
         <BrowserRouter>
           <Routes>
