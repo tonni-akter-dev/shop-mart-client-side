@@ -41,7 +41,6 @@ const ManageAllOrders = () => {
     if (reason === "clickaway") {
       return;
     }
-
     setOpen(false);
   };
 
