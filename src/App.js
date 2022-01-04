@@ -14,12 +14,12 @@ import About from "./component/pages/About/About";
 import Contact from "./component/pages/Contact/Contact";
 import NotFound from "./component/pages/NotFound/NotFound";
 import Portfolio from "./component/pages/Portfolio/Portfolio";
-import Register from "./component/Register/Register";
 import ProductDetails from "./component/ProductDetails/ProductDetails";
 import Blogs from "./component/Routes/Blogs/Blogs/Blogs";
 import Order from "./component/ProductsComponents/Order/Order";
 import Shops from "./component/Routes/ShopRoutes/Shops/Shops";
 import DashboardPort from './component/Dashboard/DashboardPort/DashboardPort';
+import LoginToggle from "./component/Register/Login/Login/LoginToggle/LoginToggle";
 function App() {
   return (
     <div className="App">
@@ -32,17 +32,17 @@ function App() {
 
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
-            <Route path="/register" element={<Register />} />
             <Route path="/about" element={<About />} />
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
             <Route path="/blog" element={<Blogs />} />
+            <Route path="/Login" element={<LoginToggle />} />
             {/* /shop */}
             <Route path="/shop" element={<Shops />} />
             {/* dashboard */}
             <Route path="/dashboard" element={<Dashboard />}>
-            <Route
+              <Route
                 path="/dashboard"
                 element={<DashboardPort></DashboardPort>}
               ></Route>

@@ -1,125 +1,183 @@
-import {
-  createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, onAuthStateChanged,
-  signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile
-} from "firebase/auth";
+import { createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from 'firebase/auth';
 import { useEffect, useState } from "react";
-import init from "./../firebase/firebase.init";
-init();
+import initializeAuthentication from '../firebase/firebase.init';
+
+
+initializeAuthentication();
+
 const useFirebase = () => {
-  const [user, setUser] = useState({});
-  const [error, setError] = useState("");
-  const [isLoading, setIsLoading] = useState(true);
-  const [admin, setAdmin] = useState(false);
-  const auth = getAuth();
-  const provider = new GoogleAuthProvider();
-  const google = (history, location) => {
-    setIsLoading(true);
+  const [admin, setAdmin] = useState(false)
+  const [user, setUser] = useState({})
+  const [isLoading, setIsLoading] = useState(true)
+  const auth = getAuth()
+
+  const [authError, setAuthError] = useState('')
+
+
+
+  // login google------------------------
+  const signInWithGoogle = (location, history) => {
+    const provider = new GoogleAuthProvider();
     signInWithPopup(auth, provider)
       .then((result) => {
+        /*  const destination = location?.state?.from || '/';
+         history.replace(destination) */
         const user = result.user;
-        setUser(user);
-        setError("");
-      })
-      .catch((error) => {
-        setError(error.message);
-      })
-      .finally(() => setIsLoading(false));
-  };
-  // email and password authentication
-  const registerUser = (email, password, name, navigate) => {
-    setIsLoading(true);
-    createUserWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        setError("");
-        const newUser = { email, displayName: name };
-        setUser(newUser);
-        // save user 73----1
-        saveUser(email, name, "POST");
-        // set name to the firebase
-        updateProfile(auth.currentUser, {
-          displayName: name,
-        })
-          .then(() => { })
-          .catch((error) => { });
-        navigate("/");
-      })
-      .catch((error) => {
-        setError(error.message);
-      })
-      .finally(() => setIsLoading(false));
-  };
-  //   observe user state
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      if (user) {
-        setUser(user);
-      } else {
-        setUser({});
-      }
-      setIsLoading(false);
-    });
-    return () => unsubscribe;
-  }, [auth]);
+        // save user to database--
+        saveUsers(user.email, user.displayName, 'PUT')
 
-  const logout = (navigate, location) => {
-    setIsLoading(true);
-    signOut(auth)
-      .then(() => {
-        setError("");
-        setUser({});
-        navigate(location?.state?.from || '/')
+        setUser(user)
+
+        setAuthError('')
+      }).catch((error) => {
+        setAuthError(error.message)
+
+      })
+  }
+
+  // register user 
+  const registerUser = (email, password, name, location, history) => {
+    setIsLoading(true)
+    createUserWithEmailAndPassword(auth, email, password)
+
+      .then((userCredential) => {
+        // Signed in 
+        // const user = userCredential.user;
+        // ...
+        setAuthError('');
+        const newUser = { email, displayName: name };
+        setUser(newUser)
+
+        // save to database-------------
+        saveUsers(email, name, 'POST')
+        // updateProfile----------
+        updateProfile(auth.currentUser, {
+          displayName: name
+        }).then(() => {
+          // Profile updated!
+          // ...
+        }).catch((error) => {
+          // An error occurred
+          // ...
+        });
+
+        /*  const destination = location?.state?.from || '/';
+         history.replace(destination) */
+        setAuthError('')
       })
       .catch((error) => {
-        setError(error.message);
+        // const errorCode = error.code;
+        // const errorMessage = error.message;
+        setAuthError(error.message)
+        // ..
+      }).finally(() => {
+        setIsLoading(false);
+
+
       })
-      .finally(() => setIsLoading(false));
-  };
-  // signInWithEmailAndPassword
-  const loginUser = (email, password, navigate) => {
-    setIsLoading(true);
+  }
+
+
+  const loginUser = (email, password, location, history) => {
+    setIsLoading(true)
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
-        setError("");
-        navigate("/");
+        /* const destination = location?.state?.from || '/';
+        history.push(destination) */
+        setAuthError('')
+
       })
       .catch((error) => {
-        setError(error.message);
-      });
-  };
-  const saveUser = (email, displayName, method) => {
-    const user = { email, displayName };
-    fetch("https://mighty-reef-87460.herokuapp.com/users", {
+        // const errorCode = error.code;
+        const errorMessage = error.message;
+        setAuthError(errorMessage)
+      }).finally(() => {
+        setIsLoading(false)
+
+      })
+  }
+
+
+  //logout-----------------
+
+  const logOut = () => {
+    signOut(auth).then(() => {
+      setUser({})
+    }).catch((error) => {
+      // An error happened.
+    });
+  }
+
+
+  // save user to database-------------
+  const saveUsers = (email, displayName, method) => {
+    const user = { email, displayName }
+
+    fetch('https://mighty-reef-87460.herokuapp.com/users', {
       method: method,
       headers: {
-        "content-type": "application/json",
+        'content-type': 'application/json'
       },
-      body: JSON.stringify(user),
-    }).then();
-  };
-  // admin....verify
+      body: JSON.stringify(user)
+    }).then(res => res.json())
+      .then(data => console.log(data))
+  }
+
+
+
+  // on auth state change -----------------------------
+
   useEffect(() => {
-    if (user.email) {
-      setIsLoading(true);
-      fetch(`https://mighty-reef-87460.herokuapp.com/users/${user.email}`)
-        .then((res) => res.json())
-        .then((data) => setAdmin(data.admin))
-        .finally(() => {
-          setIsLoading(false);
-        });
-    }
-  }, [user.email]);
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+
+      if (user) {
+
+        setUser(user)
+      } else {
+        setUser({})
+      }
+      setIsLoading(false)
+    })
+    return () => unsubscribe()
+  }, [auth])
+
+
+  // get admin ============================
+  useEffect(() => {
+
+    fetch(`https://mighty-reef-87460.herokuapp.com/users/${user.email}`)
+
+      .then(res => res.json())
+      .then(data => {
+
+        setAdmin(data.admin)
+
+      }).finally(() => {
+
+      })
+  }, [user.email])
+
+
 
   return {
-    google,
     user,
+    setUser,
+    signInWithGoogle,
     registerUser,
-    logout,
     loginUser,
     isLoading,
-    error,
-    admin,
     setIsLoading,
-  };
-};
+    logOut,
+    authError,
+    admin
+
+  }
+}
 
 export default useFirebase;
+
+
+
+
+
+
