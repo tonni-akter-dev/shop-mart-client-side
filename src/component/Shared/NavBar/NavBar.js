@@ -1,25 +1,24 @@
-import Checkbox from "@mui/material/Checkbox";
-import { pink } from "@mui/material/colors";
-import React, { useState } from "react";
+
+
+import React from "react";
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import "./NavBar.css";
-import { NavLink } from "react-router-dom";
-import Login from "../../Register/Login/Login";
-import Register from "../../Register/Register";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
+
 import useAuth from "../../hook/useAuth";
 import "./NavBar.css";
+import { Button } from "@mui/material";
 
 const NavBar = () => {
-  const { user, logout } = useAuth();
-  const [toggle, setToggle] = useState(false);
-  const toggleChecked = () => setToggle((value) => !value);
-  const label = { inputProps: { "aria-label": "Checkbox demo" } };
+  const { user, logOut } = useAuth();
+  const location = useLocation();
+  const history = useNavigate();
   return (
     <div>
-      <Navbar expand="lg">
+      <Navbar fixed="top" bg="light" expand="lg">
         <Container>
           <Navbar.Brand href="#home">
-            <img src="/logo.webp" style={{ height: "50px" }} alt="" />
+            <img className=" img-fluid" src="/logo.webp" alt="" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
@@ -32,7 +31,8 @@ const NavBar = () => {
                 }}
                 to="/"
               >
-                Home
+                <Button sx={{ color: 'black' }}>Home</Button>
+
               </NavLink>
               <NavLink
                 style={{
@@ -42,7 +42,7 @@ const NavBar = () => {
                 }}
                 to="/about"
               >
-                About Us
+                <Button sx={{ color: 'black' }}>About Us</Button>
               </NavLink>
               <NavLink
                 style={{
@@ -52,7 +52,7 @@ const NavBar = () => {
                 }}
                 to="/portfolio"
               >
-                Portfolio
+                <Button sx={{ color: 'black' }}>Portfolio</Button>
               </NavLink>
               <NavLink
                 style={{
@@ -60,73 +60,80 @@ const NavBar = () => {
                   textDecoration: "none",
                   margin: "10px",
                 }}
-                to="/"
+                to="/shop"
               >
 
-                Shop
+                <Button sx={{ color: 'black' }}> Shop</Button>
               </NavLink>
-              <NavDropdown title="Pages" id="basic-nav-dropdown">
-                <NavDropdown.Item href="/about">
-                  <NavLink
-                    to="/about"
-                    style={{
-                      color: "black",
-                      textDecoration: "none",
-                      margin: "10px",
-                    }}
-                  >
-                    About us
-                  </NavLink>
-                </NavDropdown.Item>
-                <NavDropdown.Item href="/contact">
-                  <NavLink
-                    style={{
-                      color: "black",
-                      textDecoration: "none",
-                      margin: "10px",
-                    }}
-                    to="/contact"
-                  >
-                    Contact us
-                  </NavLink>
-                </NavDropdown.Item>
-                <NavDropdown.Item href="/blog">
-                  <NavLink
-                    style={{
-                      color: "black",
-                      textDecoration: "none",
-                      margin: "10px",
-                    }}
-                    to="/blog"
-                  >
-                    Blog
-                  </NavLink>
-                </NavDropdown.Item>
-                <NavDropdown.Item href="/blog">
-                  <NavLink
-                    style={{
-                      color: "black",
-                      textDecoration: "none",
-                      margin: "10px",
-                    }}
-                    to="/portfolio"
-                  >
-                    Portfolio
-                  </NavLink>
-                </NavDropdown.Item>
-                <NavDropdown.Item href="/error">
-                  <NavLink
-                    style={{
-                      color: "black",
-                      textDecoration: "none",
-                      margin: "10px",
-                    }}
-                    to="/error"
-                  >
-                    Not Found 404
-                  </NavLink>
-                </NavDropdown.Item>
-              </NavDropdown>
+              <Button>
+                <NavDropdown title="Pages" id="basic-nav-dropdown">
+                  <NavDropdown.Item href="/about">
+                    <NavLink
+                      to="/about"
+                      style={{
+                        color: "black",
+                        textDecoration: "none",
+                        margin: "10px",
+                      }}
+                    >
+                      <Button sx={{ color: 'black' }}>
+                        <Button sx={{ color: 'black' }}>About</Button>
+                      </Button>
+                    </NavLink>
+                  </NavDropdown.Item>
+                  <NavDropdown.Item href="/contact">
+                    <NavLink
+                      style={{
+                        color: "black",
+                        textDecoration: "none",
+                        margin: "10px",
+                      }}
+                      to="/contact"
+                    >
+                      <Button sx={{ color: 'black' }}> Contact us</Button>
+
+                    </NavLink>
+                  </NavDropdown.Item>
+                  <NavDropdown.Item href="/blog">
+                    <NavLink
+                      style={{
+                        color: "black",
+                        textDecoration: "none",
+                        margin: "10px",
+                      }}
+                      to="/blog"
+                    >
+                      <Button sx={{ color: 'black' }}>Blog</Button>
+
+                    </NavLink>
+                  </NavDropdown.Item>
+                  <NavDropdown.Item href="/blog">
+                    <NavLink
+                      style={{
+                        color: "black",
+                        textDecoration: "none",
+                        margin: "10px",
+                      }}
+                      to="/portfolio"
+                    >
+                      <Button sx={{ color: 'black' }}>Portfolio</Button>
+
+                    </NavLink>
+                  </NavDropdown.Item>
+                  <NavDropdown.Item href="/error">
+                    <NavLink
+                      style={{
+                        color: "black",
+                        textDecoration: "none",
+                        margin: "10px",
+                      }}
+                      to="/error"
+                    >
+                      Not Found 404
+                    </NavLink>
+                  </NavDropdown.Item>
+                </NavDropdown>
+              </Button>
               <NavLink
                 style={{
                   color: "black",
@@ -135,8 +142,10 @@ const NavBar = () => {
                 }}
                 to="/dashboard"
               >
-                Dashboard
+                <Button sx={{ color: 'black' }}>Dashboard</Button>
+
               </NavLink>
+
             </Nav>
             <Nav>
               <NavLink
@@ -148,62 +157,7 @@ const NavBar = () => {
               </NavLink>
 
               {/* login */}
-              <button
-                type="button"
-                className="btn"
-                data-bs-toggle="modal"
-                data-bs-target="#exampleModal"
-              >
-                <i className="far fa-user"></i>
-              </button>
-              <div
-                className="modal fade"
-                id="exampleModal"
-                tabIndex="-1"
-                aria-labelledby="exampleModalLabel"
-                aria-hidden="true"
-              >
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title mx-auto" id="exampleModalLabel">
-                        Login
-                      </h5>
-                      <button
-                        type="button"
-                        className="btn-close"
-                        data-bs-dismiss="modal"
-                        aria-label="Close"
-                      ></button>
-                    </div>
 
-                    <div className="modal-body">
-                      {/* Login */}
-                      <div>
-                        {!toggle ? <Login /> : <Register />}
-                        <span className="text-2xl">
-                          {" "}
-                          {!toggle
-                            ? "Are you New User? Please register"
-                            : " Already Register Please login"}
-                          <Checkbox
-                            checked={toggle}
-                            onChange={toggleChecked}
-                            {...label}
-                            defaultChecked
-                            sx={{
-                              color: pink[800],
-                              "&.Mui-checked": {
-                                color: pink[600],
-                              },
-                            }}
-                          />
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
 
               <NavLink
                 className="mt-2"
@@ -221,16 +175,13 @@ const NavBar = () => {
                 <i className="fab fa-opencart"></i>
               </NavLink>
 
-              {user.email && (
-                <NavLink
-                  className="mt-2"
-                  onClick={logout}
-                  style={{ color: "black", marginRight: "20px" }}
-                  to="/"
-                >
-                  <i className="fas fa-sign-out-alt"></i>
-                </NavLink>
-              )}
+
+              <NavLink to='/'><Button sx={{ color: 'black' }}>{user.displayName}</Button></NavLink>
+              {
+                user.email ? <Button sx={{ color: 'black' }} onClick={() => logOut(location, history)}>Logout</Button> :
+                  <NavLink to='/Login' ><Button sx={{ color: 'black' }}>Login</Button></NavLink>
+              }
+
             </Nav>
           </Navbar.Collapse>
         </Container>
