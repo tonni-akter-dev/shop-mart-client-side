@@ -17,9 +17,10 @@ const NavBar = () => {
     <div>
       <Navbar fixed="top" bg="light" expand="lg">
         <Container>
-          <Navbar.Brand href="#home">
+          <NavLink to='/'>
             <img className=" img-fluid" src="/logo.webp" alt="" />
-          </Navbar.Brand>
+          </NavLink>
+
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mx-auto">

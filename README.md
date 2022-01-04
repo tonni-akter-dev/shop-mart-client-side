@@ -1,8 +1,8 @@
-# Carame-Cake-Website
+# Shop Mart
 
 ## Live site link
 
-[Carame-Cake-Website](https://carame-cake-website.web.app/) : https://carame-cake-website.web.app/
+[Shop Mart](https://shop-mart-f89cb.web.app/)
 
 ## Using Technology and Programming Language
 
@@ -19,16 +19,23 @@
 - Firebase Authentication system
 
 
+* Metaril iu
 * FontAwesome icon
 * React Reveal Animation library
 * SweetAlert ,SweetAlert2 for Alert
 
-## uses of This Website
+## uses and admin of This Website
 
-- This Website help you easily Search your needed cake products.
-- Here you will also take your relevant product.
-- You can order your favourite pastry 
-- You can cancel your order.
-- Help to you Know Our facilities
-- Our latest news and special Offer and Discount
-- You may also take our 24/7 Emergency helpline service.
+- Our website has two different dashboards for client and admin
+
+- In the client dashboard client can delete his order and he will see his order status. 
+
+- In the admin dashboard, the admin can delete a client's order or update his status.
+- User can Chat in other user.
+
+- User can authentication firebase login and registration .
+
+- An admin can add a new product to the website. Admin can delete the old product. Also, an admin can add a new admin to the website.
+
+- Moreover, many updated features have my website When I made This website I faced many errors that I manipulate by google and my messenger team member.
+
