@@ -127,7 +127,7 @@ const About = () => {
               <div className="card-image profile-img--two">
                 <img
                   className=""
-                  src="https://scontent.fdac24-1.fna.fbcdn.net/v/t39.30808-6/259797078_606920690736093_9109459830613981002_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeHZ86-fOrwAZsr8scciP9hR_Zn-lDq3cnH9mf6UOrdycWVmmvj-PE9s3V6WiD8lzhR-mlm6J0yWeXojzeVLRBiQ&_nc_ohc=IyhY50Rg6noAX-ieOei&_nc_ht=scontent.fdac24-1.fna&oh=00_AT_9WWFwEmxtflpLUHf_iGdMlVr2C0QxCRhiOzmDpvS6YA&oe=61D888CA"
+                  src="https://i.ibb.co/cLHyCr0/270297229-1055796618297882-3347017718013340990-n.jpg"
                   alt="profile two"
                 />
               </div>

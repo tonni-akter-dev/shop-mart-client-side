@@ -135,7 +135,7 @@ const Order = () => {
             type="number"
             {...register("mobile", { required: true })}
           />{" "}
-          {/* <input type="submit" /> */}
+          <br />
           <button className="btn btn-light h-100" type="submit">
             {isupdated ? (
               <Spinner
