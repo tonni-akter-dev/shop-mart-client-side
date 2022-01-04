@@ -103,9 +103,10 @@ const useFirebase = () => {
 
   //logout-----------------
 
-  const logOut = () => {
+  const logOut = (navigation, location) => {
     signOut(auth).then(() => {
       setUser({})
+      navigation(location?.state?.from || '/')
     }).catch((error) => {
       // An error happened.
     });
