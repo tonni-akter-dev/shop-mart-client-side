@@ -9,7 +9,6 @@ const ProductDetails = () => {
   const [productDetail, setProductDetail] = useState({});
   const [quantity, setQuantity] = useState(1)
 
-
   const handleIncrement = () => {
     if (quantity < 20) {
       setQuantity(prevCount => prevCount + 1)

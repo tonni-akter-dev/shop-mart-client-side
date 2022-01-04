@@ -29,7 +29,7 @@ const Order = () => {
       .then((res) => {
         if (res.data.insertedId) {
           swal(
-            "Booking Successful",
+            "Ordered Successful",
             "Your Entered Information has been Successfully save on our Database",
             "success"
           );
@@ -47,7 +47,6 @@ const Order = () => {
         console.log(err.message);
       });
   };
-
   setValue("name", user.displayName);
   setValue("email", user.email);
   setValue("title", productDetail.title);
@@ -140,7 +139,7 @@ const Order = () => {
             {isupdated ? (
               <Spinner
                 animation="border"
-                variant="light"
+                variant="dark"
                 style={{ height: "25px", width: "25px" }}
               />
             ) : (
