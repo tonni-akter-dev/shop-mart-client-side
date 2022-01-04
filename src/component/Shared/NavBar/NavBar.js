@@ -109,7 +109,6 @@ const NavBar = () => {
                       to="/portfolio"
                     >
                       <Button sx={{ color: 'black' }}>Portfolio</Button>
-
                     </NavLink>
                   </NavDropdown.Item>
                   <NavDropdown.Item href="/error">
@@ -135,7 +134,6 @@ const NavBar = () => {
                 to="/dashboard"
               >
                 <Button sx={{ color: 'black' }}>Dashboard</Button>
-
               </NavLink>
 
             </Nav>
@@ -165,7 +163,7 @@ const NavBar = () => {
                 style={{ color: "black", marginRight: "20px" }}
                 to="/chat"
               >
-                <Button size="small"><ChatIcon /></Button>
+                <Button size="small" sx={{color: "black"}}><ChatIcon /></Button>
               </NavLink>
 
 

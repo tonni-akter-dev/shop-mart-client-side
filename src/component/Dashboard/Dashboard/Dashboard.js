@@ -5,8 +5,6 @@ import "./Dashboard.css";
 import userPhoto from "./img/userPhoto.png";
 const Dashboard = () => {
   const { logOut, admin, user } = useAuth();
-  // const history = useNavigate()
-  const uri = "/home";
   const navigation = useNavigate();
   const location = "/home";
   return (
