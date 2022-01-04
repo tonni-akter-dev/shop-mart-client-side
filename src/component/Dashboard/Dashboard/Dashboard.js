@@ -4,9 +4,7 @@ import useAuth from "../../hook/useAuth";
 import "./Dashboard.css";
 import userPhoto from "./img/userPhoto.png";
 const Dashboard = () => {
-  const { logout, admin, user } = useAuth();
-  // const history = useNavigate()
-  const uri = "/home";
+  const { logOut, admin, user } = useAuth();
   const navigation = useNavigate();
   const location = "/home";
   return (
@@ -106,7 +104,7 @@ const Dashboard = () => {
               )}
             </ul>
             <button
-              onClick={() => logout(navigation, location)}
+              onClick={() => logOut(navigation, location)}
               className="btn my-button"
             >
               <i className="fas fa-sign-out-alt"></i> Sign out

@@ -1,13 +1,13 @@
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { useEffect } from 'react';
+import { useEffect } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import AuthProvider from "./component/context/AuthProvider/AuthProvider";
 import AddProduct from "./component/Dashboard/Add A Product/AddProduct";
 import AddReview from "./component/Dashboard/AddReview/AddReview";
 import Dashboard from "./component/Dashboard/Dashboard/Dashboard";
-import DashboardPort from './component/Dashboard/DashboardPort/DashboardPort';
+import DashboardPort from "./component/Dashboard/DashboardPort/DashboardPort";
 import MakeAdmin from "./component/Dashboard/MakeAdmin/MakeAdmin";
 import ManageAllOrders from "./component/Dashboard/ManageAllOrders/ManageAllOrders";
 import ManageProducts from "./component/Dashboard/ManageProducts/ManageProducts";
@@ -24,20 +24,34 @@ import LoginToggle from "./component/Register/Login/Login/LoginToggle/LoginToggl
 import Chat from "./component/pages/Chat/Chat";
 import Blogs from "./component/Routes/Blogs/Blogs/Blogs";
 import Shops from "./component/Routes/ShopRoutes/Shops/Shops";
+import PrivateRoute from "./component/firebase/PrivateRoute/PrivateRoute";
 function App() {
-
   useEffect(() => {
-    AOS.init({ duration: 1000 })
-  }, [])
+    AOS.init({ duration: 1000 });
+  }, []);
 
   return (
     <div className="App">
       <AuthProvider>
         <BrowserRouter>
           <Routes>
-            <Route path="/homeProducts/:id" element={<ProductDetails />} />
+            <Route
+              path="/homeProducts/:id"
+              element={
+                <PrivateRoute>
+                  <ProductDetails />
+                </PrivateRoute>
+              }
+            />
 
-            <Route path="/order/:id" element={<Order />} />
+            <Route
+              path="/order/:id"
+              element={
+                <PrivateRoute>
+                  <Order />
+                </PrivateRoute>
+              }
+            />
 
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />

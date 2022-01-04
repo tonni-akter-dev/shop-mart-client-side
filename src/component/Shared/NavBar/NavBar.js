@@ -134,7 +134,6 @@ const NavBar = () => {
                 to="/dashboard"
               >
                 <Button sx={{ color: 'black' }}>Dashboard</Button>
-
               </NavLink>
 
             </Nav>

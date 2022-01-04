@@ -11,7 +11,6 @@ const Products = () => {
   }, []);
   return (
     <div className="container">
-      <h2>All Products</h2>
       <Row lg={4}>
         {homeProducts.map((homeProduct) => (
           <Product key={homeProduct._id} homeProduct={homeProduct}></Product>
