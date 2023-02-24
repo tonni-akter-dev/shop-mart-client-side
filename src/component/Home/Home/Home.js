@@ -10,13 +10,15 @@ import ReviewPost from "../ReviewPost/ReviewPost";
 import { Link, Outlet } from "react-router-dom";
 import Products from "../../ProductsComponents/Products/Products";
 
+
 const Home = () => {
   return (
     <div>
       <NavBar />
       <Banner />
       <Gallary1 />
-      <div className="text-center">
+      {/* <ProductsTabs/> */}
+      {/* <div className="text-center">
         <Link
           style={{
             color: "black",
@@ -60,7 +62,7 @@ const Home = () => {
         <div className="main mt-5">
           <Outlet></Outlet>
         </div>
-      </div>
+      </div> */}
       <Products />
       <ReviewPost />
       <Services />

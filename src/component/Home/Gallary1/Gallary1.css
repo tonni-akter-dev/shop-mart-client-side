@@ -19,7 +19,7 @@
     margin:0 auto;
 }
 .sec51pic{
-    height: 650px;
+    height: 650px !important;
     transition: 2s all ease-in-out;
    
 }
@@ -34,23 +34,41 @@
 }
 .womenbtn{
     position: absolute;
-    bottom: 15%;
-    left: 28%;
+    bottom: 10%;
+    left: 35%;
 }
 .bagbtn{
     position: absolute;
-    bottom: 65%;
-    left: 10%;
+    bottom: 62%;
+    left: 20%;
 }
 .shoebtn{
     position: absolute;
     bottom: 10%;
-    left: 15%;
+    left: 21%;
 }
 .watchbtn{
     position: absolute;
-    bottom: 15%;
-    left: 20%;
+    bottom: 10%;
+    left: 30%;
+}
+@media only screen and (max-width: 900px) {
+    .bagbtn{
+        position: absolute;
+        bottom: 62%;
+        left:35%;
+        padding-top: 15px !important;
+    }
+    .shoebtn{
+        position: absolute;
+        bottom: 10%;
+        left: 30%;
+    }
+    .watchbtn{
+        position: absolute;
+        bottom: 10%;
+        left: 30%;
+    }
 }
 
-/* nipa design part end */
+
